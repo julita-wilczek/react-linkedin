@@ -1,0 +1,37 @@
+#Navbar {
+  width: 100%;
+  position: fixed;
+  font-size: 13px;
+  padding-left: 100px;
+  padding-right: 0;
+}
+
+#linkedinIcon {
+  font-size: 35px;
+  color: rgb(44, 134, 236);
+  margin-right: 10px;
+}
+
+#userImage {
+  border-right: 1px solid rgb(141, 134, 134);
+}
+#searchBar {
+  margin-right: 50px;
+}
+
+#SearchBarNavbar {
+  height: 38px;
+}
+
+#UserImageNavbar {
+  width: 30px;
+}
+
+i {
+  font-size: 20px;
+}
+
+#tryPremium {
+  width: 150px;
+  color: rgb(255, 174, 0);
+}
