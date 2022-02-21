@@ -5,6 +5,7 @@ import PeopleSection from "./PeopleSection"
 import ProfileSection from "./ProfileSection"
 import SkillsCard from "./SkillsCard"
 import ProfileCard from "./ProfileCard"
+import ActivityCard from "./ActivityCard"
 
 const ProfilePage = () => {
 
@@ -14,7 +15,7 @@ const ProfilePage = () => {
             <Col className="col-8">
                 <Header />
                 <ProfileSection name="About" card="about"/>
-                <ProfileSection name="Activity" card="activity"/>
+                <ProfileSection name="Activity" card={<ActivityCard />}/>
                 <ProfileSection name="Experience" card={<ProfileCard type="experience"/>} />
                 <ProfileSection name="Education" card={<ProfileCard type="education"/>}/>
                 <ProfileSection name="Licenses & certifications" card={<ProfileCard type="licences"/>}/>
