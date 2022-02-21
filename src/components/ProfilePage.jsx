@@ -4,8 +4,12 @@ import MyFooter from "./MyFooters"
 import PeopleSection from "./PeopleSection"
 import ProfileSection from "./ProfileSection"
 import SkillsCard from "./SkillsCard"
-import ProfileCard from "./ProfileCard"
 import ActivityCard from "./ActivityCard"
+import LanguageCard from "./LanguageCard"
+import ExperienceCard from "./ExperienceCard"
+import EducationCard from "./EducationCard"
+import LicenceCard from "./LicencesCard"
+
 
 const ProfilePage = () => {
 
@@ -16,11 +20,11 @@ const ProfilePage = () => {
                 <Header />
                 <ProfileSection name="About" card="about"/>
                 <ProfileSection name="Activity" card={<ActivityCard />}/>
-                <ProfileSection name="Experience" card={<ProfileCard type="experience"/>} />
-                <ProfileSection name="Education" card={<ProfileCard type="education"/>}/>
-                <ProfileSection name="Licenses & certifications" card={<ProfileCard type="licences"/>}/>
+                <ProfileSection name="Experience" card={<ExperienceCard />} />
+                <ProfileSection name="Education" card={<EducationCard />}/>
+                <ProfileSection name="Licenses & certifications" card={<LicenceCard /> }/>
                 <ProfileSection name="Skills" card={<SkillsCard />} />
-                <ProfileSection name="Language" />
+                <ProfileSection name="Language" card={<LanguageCard />} />
             </Col>
             <Col className="col-4">
                 <PeopleSection name="People Also Viewed" array="also-viewed"/>
