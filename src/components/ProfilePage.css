@@ -2,19 +2,8 @@
     padding-top: 100px;
 }
 
-#profileSection {
-    background-color: white;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 20px;
-    border-radius: 0.8rem;
-    border-width: 1px;
-    border-color: #e9e5df;
-    border-style: solid;
-    
-}
 
-#profileSection button:not(#activityButton) {
+.profileSection button:not(#activityButton) {
     border-radius: 1rem;
     background-color: white;
     color: rgba(0, 0, 0, 0.6);
@@ -41,8 +30,7 @@ hr:last-child{
     margin: 0px;
 }
 
-
-#peopleSection {
+.profileSection, .peopleSection, #learningSection  {
     background-color: white;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -54,7 +42,7 @@ hr:last-child{
     
 }
 
-#peopleSection button {
+.peopleSection button {
     border-radius: 1rem;
     background-color: white;
     color: rgba(0, 0, 0, 0.6);
@@ -66,7 +54,6 @@ hr:last-child{
   
 }
 
-#peopleSection .card {
+.peopleSection .card {
     border: none;
-    margin-bottom: 0px;
 }

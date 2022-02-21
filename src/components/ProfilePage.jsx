@@ -11,6 +11,7 @@ import EducationCard from "./EducationCard"
 import LicenceCard from "./LicencesCard"
 import "./ProfilePage.css"
 import PeopleCard from "./PeopleCard"
+import LearningSection from "./LearningSection"
 
 
 const ProfilePage = () => {
@@ -31,6 +32,7 @@ const ProfilePage = () => {
             <Col className="col-4">
                 <PeopleSection name="People Also Viewed" card={<PeopleCard/>}/>
                 <PeopleSection name="People You May Know" card={<PeopleCard/>}/>
+                <LearningSection />
             </Col>
         </Row>
     <MyFooter />

@@ -7,7 +7,7 @@ const PeopleSection = ({name}) => {
 
     const array = name === "People Also Viewed" ? AlsoViewed : MayKnow
     return(
-        <> <div id="peopleSection">
+        <> <div className="peopleSection">
 <h6 className="mb-3">{name}</h6>
 <PeopleCard array={array} />
         </div>

@@ -7,11 +7,11 @@
 }
 
 .peopleDescription{
-    font-size:12px;
+    font-size:12px!important;
     margin-bottom: 5px;
 }
 
 .peopleName{
-    font-size:15px;
-    margin-bottom: 0px;
+    font-size:15px!important;
+    margin-bottom: 0px!important;
 }
