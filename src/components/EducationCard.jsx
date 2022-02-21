@@ -7,14 +7,16 @@ import { Image } from "react-bootstrap"
 const EducationCard = () => {
   
     return (
-        education.map((edu, index) => {return(<div key={index} className="d-flex">
-            <Image className="mr-1" style={{height:"50px"}} alt={edu.place} src={edu["place-img"]}/>
+        education.map((edu, index) => {return(<><div key={index} className="d-flex">
+            <Image className="mr-2" style={{height:"50px"}} alt={edu.place} src={edu["place-img"]}/>
             <div>
-                <div><b>{edu.place}</b></div>
-                <div>{edu["degree-type"]},{edu["degree-name"]} </div>
-                <div>{edu.date}</div>
+            <h6 className="mb-0">{edu.place}</h6>
+                <div style={{fontSize: "14px"}}>{edu["degree-type"]}, {edu["degree-name"]} </div>
+                <div style={{fontSize: "14px"}} className="text-muted">{edu.date}</div>
             </div>
-        </div>)}
+        </div>
+        <hr />
+        </>)}
     )
     )
    

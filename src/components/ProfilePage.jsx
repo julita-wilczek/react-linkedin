@@ -9,12 +9,15 @@ import LanguageCard from "./LanguageCard"
 import ExperienceCard from "./ExperienceCard"
 import EducationCard from "./EducationCard"
 import LicenceCard from "./LicencesCard"
+import "./ProfilePage.css"
+import PeopleCard from "./PeopleCard"
+import LearningSection from "./LearningSection"
 
 
 const ProfilePage = () => {
 
     return (
-    <Container>
+    <Container id="page">
         <Row>
             <Col className="col-8">
                 <Header />
@@ -27,8 +30,9 @@ const ProfilePage = () => {
                 <ProfileSection name="Language" card={<LanguageCard />} />
             </Col>
             <Col className="col-4">
-                <PeopleSection name="People Also Viewed" array="also-viewed"/>
-                <PeopleSection name="People You May Know" array="may-know" />
+                <PeopleSection name="People Also Viewed" card={<PeopleCard/>}/>
+                <PeopleSection name="People You May Know" card={<PeopleCard/>}/>
+                <LearningSection />
             </Col>
         </Row>
     <MyFooter />

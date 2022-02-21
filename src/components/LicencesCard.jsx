@@ -6,15 +6,17 @@ import licences from "../data/licences.json"
 const LicenceCard = () => {
   
     return (
-        licences.map((licence, index) => {return(<div key={index} className="d-flex">
-            <Image className="mr-1" style={{height:"50px"}} alt={licence.name} src={licence["place-img"]}/>
+        licences.map((licence, index) => {return(<><div key={index} className="d-flex">
+            <Image className="mr-2" style={{height:"50px"}} alt={licence.name} src={licence["place-img"]}/>
             <div>
-                <div><b>{licence.name}</b></div>
-                <div>{licence.place}</div>
-                <div>Issued on {licence["date-issued"]}</div>
-                <p>Credential ID {licence["ID"]}</p>
+                <h6 className="mb-0">{licence.name}</h6>
+                <div style={{fontSize: "14px"}}>{licence.place}</div>
+                <div style={{fontSize: "14px"}} className="text-muted">Issued on {licence["date-issued"]}</div>
+                <div style={{fontSize: "14px"}} className="text-muted">Credential ID {licence["ID"]}</div>
             </div>
-        </div>)}
+            </div>
+            <hr />
+        </>)}
     )
     )
    
