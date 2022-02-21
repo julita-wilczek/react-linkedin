@@ -1,13 +1,17 @@
-import { Button } from "react-bootstrap"
+import languages from "..//data/languages.json"
+
 const SkillsCard = () => {
 
     return(
-    <div>
+    languages.map(language => {return (
+<div>
     <h6>
-        Language Name
+        {language.name}
     </h6>
-    <p>Language description</p>
-    </div>)
+    <p>{language.description}</p>
+    </div>
+    )})
+    )
 }
 
 export default SkillsCard

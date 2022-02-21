@@ -1,8 +1,5 @@
-//Here the card will be created dynamically depening on the type of the card
-// We will use array to get the data
-
-const ProfileCard = ({type}) => {
-    return(<div>{type}</div>)
+const ProfileCard = () => {
+    return (<div>Test</div>)
 }
 
 export default ProfileCard
