@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MyNavbar from "./components/MyNavbar";
 import ProfilePage from "./components/ProfilePage";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import "./App.css"
 
 
 function App() {

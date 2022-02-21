@@ -3,6 +3,9 @@
   font-size: 13px;
   padding-left: 100px;
   padding-right: 0;
+  position: fixed;
+  z-index: 100;
+  background-color: white;
 }
 
 #linkedinIcon {

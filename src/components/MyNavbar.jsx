@@ -6,7 +6,6 @@ const MyNavbar = () => {
     <Navbar
       id="Navbar"
       className="d-flex justify-content-center py-0 "
-      bg="light"
       expand="lg"
     >
       <i id="linkedinIcon" className="bi bi-linkedin"></i>
