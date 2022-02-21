@@ -1,0 +1,15 @@
+#userImageMayKnow{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    margin-top:20px;
+    margin-left: 10px
+}
+
+#PeopleDescription{
+    font-size:12px
+}
+
+#PeopleName{
+    font-size:15px
+}

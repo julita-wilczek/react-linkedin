@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Giorgio Vanni",
+        "description": " 🕺🏽Dancer 💻 Frontend Engineer 🥰 Angular, React and RxJS Lover",
+        "img": "https://picsum.photos/200/300"
+    },
+    {
+        "name": "Elisabetta Cama",
+        "description": " 🕺🏽Dancer 💻 Frontend Engineer 🥰 Angular, React and RxJS Lover",
+        "img": "https://picsum.photos/100/300"
+        
+    },
+    {
+        "name": "Bob Builder",
+        "description": " 🕺🏽Dancer 💻 Frontend Engineer 🥰 Angular, React and RxJS Lover",
+        "img": "https://picsum.photos/420/300"
+
+    },
+    {
+        "name": "Mestefano Cigi",
+        "description": " 🕺🏽Dancer 💻 Frontend Engineer 🥰 Angular, React and RxJS Lover",
+        "img": "https://picsum.photos/430/300"
+
+    },
+    {
+        "name": "Brunoliegi Bastonliegi",
+        "description": " 🕺🏽Dancer 💻 Frontend Engineer 🥰 Angular, React and RxJS Lover",
+        "img": "https://picsum.photos/440/300"
+
+    }
+    
+]
