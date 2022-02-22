@@ -35,6 +35,7 @@ const ExperienceCard = ({ edit}) => {
             if (response.ok) {
                 let data = await response.json()
                 console.log(data)
+                console.log(data[0].endDate)
                 setExperiences(data)
             }
         }
@@ -55,7 +56,7 @@ const ExperienceCard = ({ edit}) => {
                 <div>
                     <h6 className="mb-0">{exp.rol}</h6>
                     <div style={{ fontSize: "14px" }}>{exp.company}</div>
-                    <div style={{ fontSize: "14px" }} className="text-muted">{format(parseISO(exp.startDate), 'MMM yyyy')} - {format(parseISO(exp.endDate), 'MMM yyyy')} </div>
+                    <div style={{ fontSize: "14px" }} className="text-muted">{format(parseISO(exp.startDate), 'MMM yyyy')} - {(typeof exp.endDate === "undefined") ? "still" : format(parseISO(exp.endDate), 'MMM yyyy')} </div>
                     <div style={{ fontSize: "14px" }} className="text-muted">{exp.area}</div>
                     <div style={{ fontSize: "14px" }} className="mt-2">{exp.description}</div>
                     <div></div>
