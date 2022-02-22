@@ -198,7 +198,7 @@ const MyFooter = () => {
           <Col md={3}>
             <div className="form-floating">
               <select className="form-select" id="floatingSelect" aria-label="Floating label select example">
-                <option selected>English(english)</option>
+                <option defaultValue>English(english)</option>
                 <option value="1">English (english)</option>
                 <option value="2">Italian</option>
                 <option value="3"></option>

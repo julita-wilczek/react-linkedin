@@ -9,7 +9,6 @@ const ProfileSection = ({ name, card }) => {
     const [editMode, setEditMode] = useState(false)
     const location = useLocation()
     const navigate = useNavigate()
-    const detailsRef = "myID" // this needs to be passed from the parameter
 
     useEffect(() => {
         location.pathname === "/in/me" ? setEditMode(true) : setEditMode(false)
@@ -20,7 +19,7 @@ const ProfileSection = ({ name, card }) => {
     return (
         <div className="profileSection">
             <div className="d-flex justify-content-between">
-                <h5 className="mb-3 d-inline-block">{name}</h5> {editMode && (<div><Button className="editButton"><i class="bi bi-plus-lg"></i></Button><Button className="editButton" onClick={() => { navigate('/in/details/' + detailsRef) }}><i class="bi bi-pencil"></i></Button></div>)}</div>
+                <h5 className="mb-3 d-inline-block">{name}</h5> {editMode && (<div><Button className="editButton"><i className="bi bi-plus-lg"></i></Button><Button className="editButton" onClick={() => { navigate('/in/details/6214aa4e0448b40015116892') }}><i className="bi bi-pencil"></i></Button></div>)}</div>
 
             {content}
         </div>

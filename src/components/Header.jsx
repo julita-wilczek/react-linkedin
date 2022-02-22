@@ -1,28 +1,28 @@
 import { useState, useEffect } from 'react'
 import { Button } from "react-bootstrap"
 import "./Header.css"
-import { useLocation } from 'react-router-dom'
+import { useLocation, useParams } from 'react-router-dom'
 
-export default function Header() {
+export default function Header({personalData, setPersonalData}) {
     const location = useLocation()
     const [myProfile, setMyProfile] = useState(true)
-    const [data, setData] = useState({})
     const [isLoading, setIsLoading] = useState(false)
     const [isError, setIsError] = useState(false)
+    const params = useParams()
+    const url = location.pathname === "/in/me" ? 'https://striveschool-api.herokuapp.com/api/profile/me' : 'https://striveschool-api.herokuapp.com/api/profile/' + params.profileId
+    const data = personalData
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                let response = await fetch('https://striveschool-api.herokuapp.com/api/profile/me', {
+                let response = await fetch(url, {
                     headers: {
                         Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjE0YWE0ZTA0NDhiNDAwMTUxMTY4OTIiLCJpYXQiOjE2NDU1MjE0ODcsImV4cCI6MTY0NjczMTA4N30.4JUxJJE6E2G8CkzqkOSSRICgdSveBWxuq1Ae6PFpsbs'
                     }
                 })
-                console.log(response)
                 if (response.ok) {
                     let data = await response.json()
-                    console.log(data)
-                    setData(data)
+                    setPersonalData(data)
                     setIsLoading(false)
                     setIsError(false)
                 } else {
