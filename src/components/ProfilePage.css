@@ -67,7 +67,17 @@ hr:last-child {
   padding: 3px 16px !important;
 }
 
-.peopleSection button:hover, #header button:nth-of-type(3):hover {
+#deleteButton 
+{ border: none!important;
+  background-color: white;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 600;
+  border-width: 1.5px;
+  font-size: 16px;
+  padding: 3px 16px !important;
+}
+
+.peopleSection button:hover, #header button:nth-of-type(3):hover, #deleteButton:hover {
     background-color: rgba(0, 0, 0, 0.1);
     border-width: 2px;
 }
@@ -77,7 +87,7 @@ hr:last-child {
   border: none;
 }
 
-#header button:first-of-type
+#header button:first-of-type, #saveButton
 {
     border-radius: 1rem;
     font-weight: 600;
@@ -104,10 +114,21 @@ hr:last-child {
       border-width: 2px;
   }
 
-  #header button:first-of-type:hover {
+  #header button:first-of-type:hover, #saveButton:hover {
     background-color: #004182!important;
     border-color: #004182!important;
   }
 
  
-  
+  #form {
+    background-color: white;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 16px;
+    padding: 3px 16px !important;
+  }
+
+ #form .form-label, #form .form-control::placeholder {
+   font-weight: 400!important;
+   font-size: 14px;
+ }
+
