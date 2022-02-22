@@ -1,4 +1,4 @@
-import { Row, Container, Col, DropdownButton, Dropdown } from "react-bootstrap";
+import { Row, Container, Col, DropdownButton, Dropdown, Nav } from "react-bootstrap";
 import "./MyFooters.css";
 
 const MyFooter = () => {
@@ -31,11 +31,10 @@ const MyFooter = () => {
             </a>
             <div>
               <DropdownButton
-                variant="outline-secondary"
                 id="dropdown-basic-button"
                 title="Privacy & Terms"
                 size="sm"
-                className="mb-1"
+                className="mb-2"
               >
                 <Dropdown.Item
                   href="https://www.linkedin.com/legal/privacy-policy"
@@ -86,36 +85,7 @@ const MyFooter = () => {
               <div className="text-secondary">Safety Center</div>
             </a>
             <div className="mt-3 fs- text-secondary">
-              LinkedIn Corporation © 2022
-            </div>
-          </Col>
-          <Col xs={2}>
-            <a
-              href="https://www.linkedin.com/accessibility"
-              target="_blank"
-              rel="noopener noreferrer"
-
-            >
-              <div className="mb-2 text-secondary">Accessibility</div>
-            </a>
-            <a
-              href="https://careers.linkedin.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-
-            >
-              <div className="text-secondary mb-2">Sales Solution</div>
-            </a>
-            <a
-              href="https://safety.linkedin.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-
-            >
-              <div className="text-secondary">Safety Center</div>
-            </a>
-            <div className="mt-3 fs- text-secondary">
-              LinkedIn Corporation © 2022
+              <span>LinkedIn Corporation © 2022</span>
             </div>
           </Col>
           <Col xs={2}>
@@ -188,20 +158,19 @@ const MyFooter = () => {
             </a>
           </Col>
           <Col xs={3}>
-            <i className="bi bi-question-circle-fill icon1"></i> <div className="text-secondary ml-2 d-inline "> <a className="text-secondary" href="https://www.linkedin.com/help/linkedin?trk=d_flagship3_profile_view_base">Questions?</a> <div className="ml-4 text-secondary">Visit our Help Center.</div> </div>
-
-
-            <div className="mt-3"><i className="bi bi-gear-fill"></i>
-              <div className="text-secondary ml-2 d-inline "><a className="text-secondary" href="https://www.linkedin.com/psettings/">Manage your account and privacy</a> <div className="ml-4 text-secondary">Go to your settings.</div> </div></div>
+          <div className="d-flex"><i className="bi bi-question-circle-fill icon1"></i> <div className="ml-2"><a className="text-secondary" style={{fontSize: "14px"}} href="https://www.linkedin.com/help/linkedin?trk=d_flagship3_profile_view_base">Questions?</a> <div className="text-secondary" style={{fontWeight: "400"}}>Visit our Help Center.</div> </div></div>
+  
+            <div className="d-flex"><i className="bi bi-gear-fill"></i>
+              <div className="text-secondary ml-2"><a className="text-secondary" style={{fontSize: "14px"}} href="https://www.linkedin.com/psettings/">Manage your account and privacy</a> <div className="text-secondary" style={{fontWeight: "400"}}>Go to your settings.</div> </div></div>
 
           </Col>
           <Col xs={3}>
+            <div className="text-secondary" style={{fontWeight: "400"}}>Select Language</div>
             <div className="form-floating">
-              <select className="form-select" id="floatingSelect" aria-label="Floating label select example">
-                <option defaultValue>English(english)</option>
-                <option value="1">English (english)</option>
-                <option value="2">Italian</option>
-                <option value="3"></option>
+              <select className="form-select" style={{padding: "0px 32px 0px 8px"}} id="floatingSelect" aria-label="Floating label select example">
+                <option defaultValue>English(English)</option>
+                <option value="1">Polish (polski)</option>
+                <option value="2">Italian (italiano)</option>
               </select>
 
             </div>

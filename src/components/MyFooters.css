@@ -6,6 +6,22 @@
 
 footer {
   font-size: 12px;
+  font-weight: 600;
+
+}
+
+footer .text-secondary {
+  color: rgba(0, 0, 0, 0.6)!important
+}
+
+footer span{
+  font-size: 12px;
+  font-weight: 400;
+}
+
+footer i {
+  color: rgba(0, 0, 0, 0.6)!important;
+  font-size: 20px;
 }
 
 #dropdown-basic-button {
@@ -27,5 +43,13 @@ footer {
 }
 .icons {
   max-width: 3px;
+}
+
+footer #dropdown-basic-button{
+  font-size: 12px!important;
+  background-color: #f3f2ef;
+  color: #6c757d!important;
+  font-family: inherit;
+  font-weight: 600;
 }
 
