@@ -25,11 +25,6 @@ const ExperienceCard = ({ edit }) => {
         const handleClose = () => setShow(false);
         const handleShow = () => setShow(true);
 
-      
-     
-
-
-    
 
 
     useEffect(() => { fetchData() }, [])
@@ -73,21 +68,8 @@ const ExperienceCard = ({ edit }) => {
         {editButton && (<><Button variant="primary" onClick={handleShow}>
               Edit 
             </Button>
-      
-            <Modal show={show} onHide={handleClose}>
-              <Modal.Header closeButton>
-                <Modal.Title>Edit experience</Modal.Title>
-              </Modal.Header>
-              <EditForm />
-              <Modal.Footer>
-                <Button variant="secondary" onClick={handleClose}>
-                  Close
-                </Button>
-                <Button variant="primary" onClick={handleClose}>
-                  Save Changes
-                </Button>
-              </Modal.Footer>
-            </Modal></>)}
+
+            </>)}
         <hr />
         </>)}
     )

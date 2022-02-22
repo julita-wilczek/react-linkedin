@@ -6,8 +6,6 @@ import {Form, Button} from "react-bootstrap"
 import {useState, useEffect} from "react"
 
 
-
-
 const EditForm = () => {
 
     const [role, SetRole] = useState("") 
@@ -18,13 +16,18 @@ const EditForm = () => {
     const [description, SetDescription] = useState("")
     const [area, SetArea] = useState("")
  
-   
-   
+
 
     const handleChange = (f, value) =>{
 
     }
 
+    const toggleCheckbox =() => {
+        if (working === true) {
+            SetWorking(false)
+        } else {SetWorking(true)}
+
+    }
 return(
     <>
     <Form>
@@ -41,7 +44,7 @@ return(
   <br />
   <Form.Group>
   <Form.Label>I am currently working for this role</Form.Label>
-  <Form.Check type="checkbox" checked={working}   onChange={(e) => (SetWorking(true),e.target.checked) }  />
+  <Form.Check type="checkbox" checked={working}   onChange={()=>{toggleCheckbox()}}  />
   </Form.Group>
   <br />
   <Form.Group>
