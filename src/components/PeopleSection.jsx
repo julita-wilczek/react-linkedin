@@ -3,16 +3,16 @@
 import MayKnow from '../data/mayknow'
 import AlsoViewed from '../data/alsoviewed'
 import PeopleCard from "./PeopleCard"
-const PeopleSection = ({name}) => {
+const PeopleSection = ({ name }) => {
 
     const array = name === "People Also Viewed" ? AlsoViewed : MayKnow
-    return(
+    return (
         <> <div className="peopleSection">
-<h6 className="mb-3">{name}</h6>
-<PeopleCard array={array} />
+            <h6 className="mb-3">{name}</h6>
+            <PeopleCard array={array} />
         </div>
         </>
     )
-    }
-    
-    export default PeopleSection
+}
+
+export default PeopleSection

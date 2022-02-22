@@ -1,7 +1,7 @@
 const BoxStyle = () => {
 
     return (
-        <div style={{border: "red"}}></div>
+        <div style={{ border: "red" }}></div>
     )
 }
 

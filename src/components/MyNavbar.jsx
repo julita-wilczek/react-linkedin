@@ -2,7 +2,7 @@ import { Navbar, Nav, Form, FormControl, Image } from "react-bootstrap";
 import "./MyNavbar.css";
 
 const MyNavbar = () => {
-    return (
+  return (
     <Navbar
       id="Navbar"
       className="d-flex justify-content-center py-0 "
@@ -80,7 +80,7 @@ const MyNavbar = () => {
         </Nav>
       </Navbar.Collapse>
     </Navbar>
-    )
-    }
-    
-    export default MyNavbar
+  )
+}
+
+export default MyNavbar
