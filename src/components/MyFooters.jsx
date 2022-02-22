@@ -1,9 +1,9 @@
-import { Row, Image, Col, DropdownButton, Dropdown } from "react-bootstrap";
+import { Row, Container, Col, DropdownButton, Dropdown } from "react-bootstrap";
 import "./MyFooters.css";
 
 const MyFooter = () => {
   return (
-    <>
+    <Container fluid="md">
       <footer>
         <img
           className="mb-2"
@@ -12,7 +12,7 @@ const MyFooter = () => {
           alt=""
         />
         <Row className="justify-content-between">
-          <Col md={2}>
+          <Col xs={2}>
             <a
               href="https://about.linkedin.com/it-it?lr=1"
               target="_blank"
@@ -89,7 +89,7 @@ const MyFooter = () => {
               LinkedIn Corporation © 2022
             </div>
           </Col>
-          <Col md={2}>
+          <Col xs={2}>
             <a
               href="https://www.linkedin.com/accessibility"
               target="_blank"
@@ -118,7 +118,7 @@ const MyFooter = () => {
               LinkedIn Corporation © 2022
             </div>
           </Col>
-          <Col md={2}>
+          <Col xs={2}>
             <a
               href="https://www.linkedin.com/accessibility"
               target="_blank"
@@ -153,7 +153,7 @@ const MyFooter = () => {
             </a>
 
           </Col >
-          <Col md={2}>
+          <Col xs={2}>
             <a
               href="https://business.linkedin.com/talent-solutions?trk=flagship_nav&veh=li-footer-lts-control&src=li-footer"
               target="_blank"
@@ -187,7 +187,7 @@ const MyFooter = () => {
               <div className="mb-2">Small Buisness</div>
             </a>
           </Col>
-          <Col md={3}>
+          <Col xs={3}>
             <i className="bi bi-question-circle-fill icon1"></i> <div className="text-secondary ml-2 d-inline "> <a className="text-secondary" href="https://www.linkedin.com/help/linkedin?trk=d_flagship3_profile_view_base">Questions?</a> <div className="ml-4 text-secondary">Visit our Help Center.</div> </div>
 
 
@@ -195,7 +195,7 @@ const MyFooter = () => {
               <div className="text-secondary ml-2 d-inline "><a className="text-secondary" href="https://www.linkedin.com/psettings/">Manage your account and privacy</a> <div className="ml-4 text-secondary">Go to your settings.</div> </div></div>
 
           </Col>
-          <Col md={3}>
+          <Col xs={3}>
             <div className="form-floating">
               <select className="form-select" id="floatingSelect" aria-label="Floating label select example">
                 <option defaultValue>English(english)</option>
@@ -208,7 +208,7 @@ const MyFooter = () => {
           </Col>
         </Row >
       </footer >
-    </>
+      </Container>
   );
 };
 

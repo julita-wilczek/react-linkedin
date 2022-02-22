@@ -1,6 +1,6 @@
 #linklogo {
-  width: 100px;
-  height: 30px;
+  width: 84px;
+  height: 21px;
   object-fit: cover;
 }
 
@@ -28,6 +28,4 @@ footer {
 .icons {
   max-width: 3px;
 }
-footer {
-  font-size: 12px;
-}
+

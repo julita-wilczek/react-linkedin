@@ -18,6 +18,7 @@ const ProfilePage = () => {
     const [personalData, setPersonalData] = useState({})
     
     return (
+        <>
         <Container id="page">
             <Row>
                 <Col className="col-12 col-md-8">
@@ -35,9 +36,10 @@ const ProfilePage = () => {
                     <PeopleSection name="People You May Know" card={<PeopleCard />} />
                     <LearningSection />
                 </Col>
-            </Row>
-            <MyFooter />
+                </Row>
         </Container>
+            <MyFooter />
+        </>
     )
 }
 
