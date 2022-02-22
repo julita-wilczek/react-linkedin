@@ -1,11 +1,27 @@
 #linklogo {
-  width: 100px;
-  height: 30px;
+  width: 84px;
+  height: 21px;
   object-fit: cover;
 }
 
 footer {
   font-size: 12px;
+  font-weight: 600;
+
+}
+
+footer .text-secondary {
+  color: rgba(0, 0, 0, 0.6)!important
+}
+
+footer span{
+  font-size: 12px;
+  font-weight: 400;
+}
+
+footer i {
+  color: rgba(0, 0, 0, 0.6)!important;
+  font-size: 20px;
 }
 
 #dropdown-basic-button {
@@ -28,6 +44,22 @@ footer {
 .icons {
   max-width: 3px;
 }
-footer {
-  font-size: 12px;
+
+footer #dropdown-basic-button{
+  font-size: 12px!important;
+  background-color: #f3f2ef;
+  color: #6c757d!important;
+  font-family: inherit;
+  font-weight: 600;
+}
+
+.form-select {
+  width: 187px;
+  height:32px;
+  border-width: 1.5px;
+  border-radius: 0.5rem;
+}
+
+.form-floating option {
+  border-radius: 0.5rem;
 }

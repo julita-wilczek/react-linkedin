@@ -69,9 +69,10 @@ const postExperience = async () => {
 const hideModal = () => {
   setModal(false)
 }
+
     return(<>
-    {modal && (<Modal  id="modal" show={modal}>
-              <Modal.Header onClick={hideModal} closeButton>
+  <Modal  onHide={hideModal} id="modal" show={modal}>
+              <Modal.Header closeButton>
                 <div style={{fontSize: "19px"}}>Edit experience</div>
               </Modal.Header>
               <EditForm expId={experienceId} setExperience={setExperience} experience={experience}/>
@@ -83,7 +84,7 @@ const hideModal = () => {
                   Post
                 </Button>)}
               </Modal.Footer>
-            </Modal>)}
+            </Modal>
     </>)
 } 
 
