@@ -1,31 +1,33 @@
-#linklogo{
-    width: 100px;
-    height: 30px;
-    object-fit: cover
+#linklogo {
+  width: 100px;
+  height: 30px;
+  object-fit: cover;
 }
 
-footer{font-size: 12px;
+footer {
+  font-size: 12px;
 }
 
-
-#dropdown-basic-button{
-    border: 0px solid white;
-    margin-left: 0;
-    padding: 0;
+#dropdown-basic-button {
+  border: 0px solid white;
+  margin-left: 0;
+  padding: 0;
 }
-#dropdown-basic-button:hover{
-    text-decoration: underline;
-    background-color: white !important;
-    color: grey !important
+#dropdown-basic-button:hover {
+  text-decoration: underline;
+  background-color: white !important;
+  color: grey !important;
 }
-.optionDrop{
-    color: black !important;
-    font-size: 12px;
+.optionDrop {
+  color: black !important;
+  font-size: 12px;
 }
-.optionDrop:hover{
-    color:rgb(20, 23, 189) !important;
-    
+.optionDrop:hover {
+  color: rgb(20, 23, 189) !important;
 }
-.icons{
-    max-width: 3px;
+.icons {
+  max-width: 3px;
+}
+footer {
+  font-size: 12px;
 }
