@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react'
 import { Button } from "react-bootstrap"
 import "./Header.css"
+import { useLocation } from 'react-router-dom'
 
 export default function Header() {
-
-    const [data, setData] = useState(null)
+    const location = useLocation()
+    const [myProfile, setMyProfile] = useState(true)
+    const [data, setData] = useState({})
     const [isLoading, setIsLoading] = useState(false)
     const [isError, setIsError] = useState(false)
 
@@ -13,7 +15,7 @@ export default function Header() {
             try {
                 let response = await fetch('https://striveschool-api.herokuapp.com/api/profile/me', {
                     headers: {
-                        Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjEzNGYyM2JlNDBiNTAwMTViNmM5MzYiLCJpYXQiOjE2NDU0MzI2MTEsImV4cCI6MTY0NjY0MjIxMX0.XMHFmhlgBOpU5vRzOfPZDux7ojlsvqlSYXpEAjQG_-U'
+                        Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjE0YWE0ZTA0NDhiNDAwMTUxMTY4OTIiLCJpYXQiOjE2NDU1MjE0ODcsImV4cCI6MTY0NjczMTA4N30.4JUxJJE6E2G8CkzqkOSSRICgdSveBWxuq1Ae6PFpsbs'
                     }
                 })
                 console.log(response)
@@ -37,17 +39,24 @@ export default function Header() {
         fetchData()
     }, [])
 
-    return (
-        <div className={"header"}>
-            <img src={"https://marketplace.canva.com/EAENvp21inc/1/0/1600w/canva-simple-work-linkedin-banner-qt_TMRJF4m0.jpg"} className={"userBanner"} width="600" height="150" alt={"Linkedin Banner"}></img >
-            {data && <img src={data.image} alt={"user profile"} className={"userImg"}></img>}
-            {data && <h1 className={"mt-4"}>{data.name} {data.surname}</h1>}
-            {data && <h6 className={"mt-4"}>{data.title}</h6>}
-            {data && <h6 className={"mt-4"}>{data.area}</h6>}
-            <Button variant="primary" className={"btns"}>Open to</Button>
-            <Button variant="secondary" className={"btns"}>Add profile section</Button>
-            <Button variant="secondary" className={"btns"}>More</Button>
+    useEffect (() => {
+        location.pathname === "/in/me" ? setMyProfile(true) :setMyProfile(false)
+    }, [location])
 
+    return (
+        <div id="header">
+        <div id="top-image"></div>
+        <div>
+            <img src={data.image} alt="user profile" className="userImg"></img>
+            <h3 className="mt-5">{data.name} {data.surname}</h3>
+            <div className="mt-n1">{data.bio}</div>
+            <div style={{fontSize:"14px"}} className="text-muted">{data.area} · <span>Contact info</span> </div>
+            <div style={{fontSize:"14px"}} className="mt-2"><span>500+ connections</span></div>
+            
+            <Button variant="primary" className="btns">Open to</Button>
+            {myProfile && (<Button variant="outline-primary" className="btns">Add profile section</Button>)}
+            <Button variant="outline-secondary" className="btns" id="more">More</Button>
+            </div>
         </div>
     )
 }
