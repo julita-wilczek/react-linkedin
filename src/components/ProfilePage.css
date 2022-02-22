@@ -3,7 +3,7 @@
 }
 
 
-.profileSection button:not(#activityButton) {
+.profileSection button:not(#activityButton, .editButton) {
     border-radius: 1rem;
     background-color: white;
     color: rgba(0, 0, 0, 0.6);
@@ -30,6 +30,21 @@ hr:last-child{
     margin: 0px;
 }
 
+.editButton {
+    border: none!important;
+    display: inline-block;
+    background-color: white!important;
+    border: none;
+    border-radius: 50%!important;
+    color:rgba(0, 0, 0, 0.6)!important;
+    font-weight: 900;
+    padding: 0px;
+    margin: 0px;
+}
+
+.editButton:hover {
+    background-color: rgba(0, 0, 0, 0.1)!important;;
+}
 .profileSection, .peopleSection, #learningSection  {
     background-color: white;
     margin-top: 20px;
