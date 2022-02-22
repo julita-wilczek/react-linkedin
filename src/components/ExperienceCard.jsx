@@ -1,8 +1,13 @@
 
 import experience from "../data/experience.json"
-import { Image, Button } from "react-bootstrap"
+import { Image, Button, Modal,  Form } from "react-bootstrap"
 import { useState, useEffect } from "react"
+
+import EditForm from "./EditForm"
+
+
 import { parseISO, format, } from 'date-fns'
+
 
 
 const ExperienceCard = ({ edit }) => {
@@ -14,6 +19,17 @@ const ExperienceCard = ({ edit }) => {
     useEffect(() => {
         edit ? setEditButton(true) : setEditButton(false)
     }, [edit])
+
+    const [show, setShow] = useState(false);
+      
+        const handleClose = () => setShow(false);
+        const handleShow = () => setShow(true);
+
+      
+     
+
+
+    
 
 
     useEffect(() => { fetchData() }, [])
@@ -52,11 +68,33 @@ const ExperienceCard = ({ edit }) => {
                     <div></div>
                 </div>
             </div>
-                {editButton && (<Button>Edit me</Button>)}
-                <hr />
-            </>)
-        }) )
 
-    }
+        </div>
+        {editButton && (<><Button variant="primary" onClick={handleShow}>
+              Edit 
+            </Button>
+      
+            <Modal show={show} onHide={handleClose}>
+              <Modal.Header closeButton>
+                <Modal.Title>Edit experience</Modal.Title>
+              </Modal.Header>
+              <EditForm />
+              <Modal.Footer>
+                <Button variant="secondary" onClick={handleClose}>
+                  Close
+                </Button>
+                <Button variant="primary" onClick={handleClose}>
+                  Save Changes
+                </Button>
+              </Modal.Footer>
+            </Modal></>)}
+        <hr />
+        </>)}
+    )
+    )
+    
+   
+}
 
-    export default ExperienceCard
+export default ExperienceCard
+
