@@ -19,7 +19,7 @@ const MyNavbar = () => {
       </Form>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className=" ml-5">
+        <Nav className=" ml-5 ">
           <Nav.Link
             className=" d-flex flex-column align-items-center justify-content-end"
             href="#home"
@@ -80,7 +80,7 @@ const MyNavbar = () => {
         </Nav>
       </Navbar.Collapse>
     </Navbar>
-  )
-}
+  );
+};
 
-export default MyNavbar
+export default MyNavbar;
