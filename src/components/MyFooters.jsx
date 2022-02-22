@@ -165,7 +165,7 @@ const MyFooter = () => {
 
           </Col>
           <Col xs={3}>
-            <div className="text-secondary" style={{fontWeight: "400"}}>Select Language</div>
+            <div className="text-secondary mb-1" style={{fontWeight: "400"}}>Select Language</div>
             <div className="form-floating">
               <select className="form-select" style={{padding: "0px 32px 0px 8px"}} id="floatingSelect" aria-label="Floating label select example">
                 <option defaultValue>English(English)</option>
