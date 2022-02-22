@@ -69,7 +69,7 @@ const ExperienceCard = ({ edit }) => {
                 </div>
             </div>
 
-        </div>
+        
         {editButton && (<><Button variant="primary" onClick={handleShow}>
               Edit 
             </Button>
