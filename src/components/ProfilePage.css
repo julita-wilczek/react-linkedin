@@ -1,59 +1,113 @@
 #page {
-    padding-top: 100px;
+  padding-top: 100px;
 }
 
-
-.profileSection button:not(#activityButton) {
-    border-radius: 1rem;
-    background-color: white;
-    color: rgba(0, 0, 0, 0.6);
-    font-weight: 600;
-    border-color: rgba(0, 0, 0, 0.6);
-    border-width: 1.5px;
-    font-size: 16px;
-    padding: 3px 16px!important;
-  
+.profileSection button:not(#activityButton, .editButton) {
+  border-radius: 1rem;
+  background-color: white;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 600;
+  border-color: rgba(0, 0, 0, 0.6);
+  border-width: 1.5px;
+  font-size: 16px;
+  padding: 3px 16px !important;
 }
 
-hr:last-child{
-    display: none;
+hr:last-child {
+  display: none;
 }
 
 #activityButton {
-    background-color: white;
-    display: inline-block;
-    width: 100%;
-    border: none;
-    color:rgba(0, 0, 0, 0.6);
-    font-weight: 600;
-    padding: 0px;
-    margin: 0px;
+  background-color: white;
+  display: inline-block;
+  width: 100%;
+  border: none;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 600;
+  padding: 0px;
+  margin: 0px;
 }
 
-.profileSection, .peopleSection, #learningSection  {
-    background-color: white;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 20px;
-    border-radius: 0.8rem;
-    border-width: 1px;
-    border-color: #e9e5df;
-    border-style: solid;
-    
+.editButton {
+  border: none !important;
+  display: inline-block;
+  background-color: white !important;
+  border: none;
+  border-radius: 50% !important;
+  color: rgba(0, 0, 0, 0.6) !important;
+  font-weight: 900;
+  padding: 0px;
+  margin: 0px;
 }
 
-.peopleSection button {
-    border-radius: 1rem;
-    background-color: white;
-    color: rgba(0, 0, 0, 0.6);
-    font-weight: 600;
-    border-color: rgba(0, 0, 0, 0.6);
-    border-width: 1.5px;
-    font-size: 16px;
-    padding: 3px 16px!important;
-  
+.editButton:hover {
+  background-color: rgba(0, 0, 0, 0.1) !important;
 }
+.profileSection,
+.peopleSection,
+#learningSection, #header {
+  background-color: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 0.8rem;
+  border-width: 1px;
+  border-color: #e9e5df;
+  border-style: solid;
+}
+
+.peopleSection button, #header button:nth-of-type(3) {
+  border-radius: 1rem;
+  background-color: white;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 600;
+  border-color: rgba(0, 0, 0, 0.6);
+  border-width: 1.5px;
+  font-size: 16px;
+  padding: 3px 16px !important;
+}
+
+.peopleSection button:hover, #header button:nth-of-type(3):hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-width: 2px;
+}
+
 
 .peopleSection .card {
-    border: none;
+  border: none;
 }
+
+#header button:first-of-type
+{
+    border-radius: 1rem;
+    font-weight: 600;
+    border-width: 1.5px;
+    border-color: #0a66c2!important;
+    font-size: 16px;
+    padding: 3px 16px !important;
+    background-color: #0a66c2!important;
+  }
+
+  #header button:nth-of-type(2){
+    border-radius: 1rem;
+    font-weight: 600;
+    border-width: 1.5px;
+    border-color: #0a66c2!important;
+    font-size: 16px;
+    padding: 3px 16px !important;
+    background-color: white!important;
+    color:#0a66c2!important;
+  }
+
+  #header button:nth-of-type(2):hover {
+      background-color: rgb(10, 102, 194, 0.1)!important;
+      border-width: 2px;
+  }
+
+  #header button:first-of-type:hover {
+    background-color: #004182!important;
+    border-color: #004182!important;
+  }
+
+ 
+  
