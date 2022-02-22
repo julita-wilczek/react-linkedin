@@ -51,7 +51,7 @@ export default function Header() {
             <h3 className="mt-5">{data.name} {data.surname}</h3>
             <div className="mt-n1">{data.bio}</div>
             <div style={{fontSize:"14px"}} className="text-muted">{data.area} · <span>Contact info</span> </div>
-            <div style={{fontSize:"13px"}} className="mt-2"><span>500+ connections</span></div>
+            <div style={{fontSize:"14px"}} className="mt-2"><span>500+ connections</span></div>
             
             <Button variant="primary" className="btns">Open to</Button>
             {myProfile && (<Button variant="outline-primary" className="btns">Add profile section</Button>)}
