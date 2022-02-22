@@ -12,6 +12,7 @@ function App() {
     <MyNavbar />
     <Routes>
       <Route path="/in/me" element={<ProfilePage />} />
+      <Route path="/in/:profileId" element={<ProfilePage />} />
       <Route path="/in/details/:profileId/" element={<DetailsPage />}/>
     </Routes>
     </BrowserRouter>
