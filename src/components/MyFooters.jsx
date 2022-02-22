@@ -164,7 +164,7 @@ const MyFooter = () => {
               <div className="text-secondary ml-2"><a className="text-secondary" style={{fontSize: "14px"}} href="https://www.linkedin.com/psettings/">Manage your account and privacy</a> <div className="text-secondary" style={{fontWeight: "400"}}>Go to your settings.</div> </div></div>
 
           </Col>
-          <Col xs={3}>
+          <Col xs={3} md={3}>
             <div className="text-secondary mb-1" style={{fontWeight: "400"}}>Select Language</div>
             <div className="form-floating">
               <select className="form-select" style={{padding: "0px 32px 0px 8px"}} id="floatingSelect" aria-label="Floating label select example">

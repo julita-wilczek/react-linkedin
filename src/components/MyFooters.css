@@ -54,7 +54,7 @@ footer #dropdown-basic-button{
 }
 
 .form-select {
-  width: 187px;
+  width: 100%;
   height:32px;
   border-width: 1.5px;
   border-radius: 0.5rem;
