@@ -24,7 +24,7 @@ const ProfilePage = () => {
                     <Header personalData={personalData} setPersonalData={setPersonalData}/>
                     <ProfileSection name="About" card="about" />
                     <ProfileSection name="Activity" card={<ActivityCard />} />
-                    <ProfileSection name="Experience" card={<ExperienceCard/>} />
+                    <ProfileSection name="Experience" card={<ExperienceCard />} />
                     <ProfileSection name="Education" card={<EducationCard />} />
                     <ProfileSection name="Licenses & certifications" card={<LicenceCard />} />
                     <ProfileSection name="Skills" card={<SkillsCard />} />
