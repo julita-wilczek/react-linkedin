@@ -20,7 +20,7 @@ const ProfilePage = () => {
     return (
         <Container id="page">
             <Row>
-                <Col className="col-8">
+                <Col className="col-12 col-md-8">
                     <Header personalData={personalData} setPersonalData={setPersonalData}/>
                     <ProfileSection name="About" card="about" />
                     <ProfileSection name="Activity" card={<ActivityCard />} />
@@ -30,7 +30,7 @@ const ProfilePage = () => {
                     <ProfileSection name="Skills" card={<SkillsCard />} />
                     <ProfileSection name="Language" card={<LanguageCard />} />
                 </Col>
-                <Col className="col-4">
+                <Col className="col-12 col-md-4">
                     <PeopleSection name="People Also Viewed" card={<PeopleCard />} />
                     <PeopleSection name="People You May Know" card={<PeopleCard />} />
                     <LearningSection />
