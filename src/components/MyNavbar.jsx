@@ -1,4 +1,5 @@
 import { Navbar, Nav, Form, FormControl, Image } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 import "./MyNavbar.css";
 
 const MyNavbar = () => {
@@ -22,7 +23,7 @@ const MyNavbar = () => {
         <Nav className=" ml-5 ">
           <Nav.Link
             className=" d-flex flex-column align-items-center justify-content-end"
-            href="#home"
+            href="/"
           >
             <i className="bi bi-house-door-fill "></i>
             Home
@@ -57,7 +58,7 @@ const MyNavbar = () => {
           </Nav.Link>
           <Nav.Link
             className=" d-flex flex-column align-items-center justify-content-end"
-            href="#home"
+            href="/in/me"
             id="userImage"
           >
             <Image
@@ -69,7 +70,7 @@ const MyNavbar = () => {
           </Nav.Link>
           <Nav.Link
             className=" d-flex flex-column align-items-center justify-content-end"
-            href="#home"
+            href=""
           >
             <i className="bi bi-grid-3x3-gap-fill text-muted"></i>
             Work
