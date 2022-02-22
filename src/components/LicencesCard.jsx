@@ -7,7 +7,7 @@ const LicenceCard = () => {
 
     return (
         licences.map((licence, index) => {
-            return (<><div key={index} className="d-flex">
+            return (<><div className="d-flex">
                 <Image className="mr-2" style={{ height: "50px" }} alt={licence.name} src={licence["place-img"]} />
                 <div>
                     <h6 className="mb-0">{licence.name}</h6>

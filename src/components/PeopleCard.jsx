@@ -7,7 +7,7 @@ import './PeopleCard.css'
 const PeopleCard = ({ array }) => {
 
     return (
-        array.map(people => (<Card className='d-flex flex-row mb-n3'>
+        array.map(people => (<Card key={people.name} className='d-flex flex-row mb-n3'>
             <Image className='userImage' src={people.img} />
             <Card.Body>
                 <Card.Title className='peopleName'>{people.name}</Card.Title>

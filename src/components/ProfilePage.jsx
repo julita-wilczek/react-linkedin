@@ -12,18 +12,19 @@ import LicenceCard from "./LicencesCard"
 import "./ProfilePage.css"
 import PeopleCard from "./PeopleCard"
 import LearningSection from "./LearningSection"
-
+import { useState, } from 'react'
 
 const ProfilePage = () => {
-
+    const [personalData, setPersonalData] = useState({})
+    
     return (
         <Container id="page">
             <Row>
                 <Col className="col-8">
-                    <Header />
+                    <Header personalData={personalData} setPersonalData={setPersonalData}/>
                     <ProfileSection name="About" card="about" />
                     <ProfileSection name="Activity" card={<ActivityCard />} />
-                    <ProfileSection name="Experience" card={<ExperienceCard />} />
+                    <ProfileSection name="Experience" card={<ExperienceCard/>} />
                     <ProfileSection name="Education" card={<EducationCard />} />
                     <ProfileSection name="Licenses & certifications" card={<LicenceCard />} />
                     <ProfileSection name="Skills" card={<SkillsCard />} />
