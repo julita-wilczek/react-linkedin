@@ -2,6 +2,7 @@
 import { useEffect } from "react";
 import { Modal, Button } from "react-bootstrap"
 import { useState } from "react";
+import EditForm from "./EditForm";
 
 const MyModal = () => {
 
@@ -16,7 +17,7 @@ const MyModal = () => {
               <Modal.Header closeButton>
                 <Modal.Title>Edit experience</Modal.Title>
               </Modal.Header>
-              Test
+              <EditForm />
               <Modal.Footer>
                 <Button variant="secondary" onClick={handleClose}>
                   Close
