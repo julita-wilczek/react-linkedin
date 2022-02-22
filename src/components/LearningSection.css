@@ -1,0 +1,34 @@
+#img1{
+    position: relative;
+}
+.play:hover .sfondo{
+    border: 2px solid ;
+    border-color: white;
+}
+
+.play1{
+    
+    z-index:10;
+    color: white;
+    position: absolute;
+    left: 2.65rem;
+    bottom: 1.3rem
+}
+
+.sfondo{
+    position: absolute;
+    left: -8px;
+    bottom: -1px;
+    background-color: black;
+    opacity: 0.6;
+   width: 35px;
+  height: 35px;
+    border-radius: 50%;
+    z-index: -1;
+    
+}
+.sfondo:hover {
+    border: 2px solid ;
+    border-color: white;
+    
+}
