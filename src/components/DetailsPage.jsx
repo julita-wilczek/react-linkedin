@@ -1,6 +1,6 @@
 // use hooks
 // making the edit form
- import { Row, Container, Col } from "react-bootstrap"
+ import { Row, Container, Col,  } from "react-bootstrap"
  import MyFooter from "./MyFooters"
  import ProfileSection from "./ProfileSection"
  import ExperienceCard from "./ExperienceCard"
