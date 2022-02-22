@@ -1,12 +1,19 @@
 
 import experience from "../data/experience.json"
-import { Image } from "react-bootstrap"
+import { Image, Button } from "react-bootstrap"
+import { useState, useEffect } from "react"
 
-
-const ExperienceCard = () => {
+const ExperienceCard = ({edit}) => {
   
+    const [editButton, setEditButton] = useState(false)
+    useEffect(() => {
+        edit ? setEditButton(true) : setEditButton(false)
+    }, [edit])
+
+
     return (
         experience.map((exp, index) => {return(<><div key={exp.name} className="d-flex">
+            
             <Image className="mr-2" style={{height:"50px"}} alt={exp.place} src={exp["place-img"]}/>
             <div>
             <h6 className="mb-0">{exp.name}</h6>
@@ -17,6 +24,7 @@ const ExperienceCard = () => {
                 
             </div>
         </div>
+        {editButton && (<Button>Edit me</Button>)}
         <hr />
         </>)}
     )

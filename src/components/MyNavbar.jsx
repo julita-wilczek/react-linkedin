@@ -52,7 +52,7 @@ const MyNavbar = () => {
             className=" d-flex flex-column align-items-center justify-content-end"
             href="#home"
           >
-            <i className="bi bi-bell-fill"></i>
+            <i className="bi bi-bell-fill text-muted"></i>
             Notifications
           </Nav.Link>
           <Nav.Link
@@ -71,10 +71,10 @@ const MyNavbar = () => {
             className=" d-flex flex-column align-items-center justify-content-end"
             href="#home"
           >
-            <i className="bi bi-grid-3x3-gap-fill"></i>
+            <i className="bi bi-grid-3x3-gap-fill text-muted"></i>
             Work
           </Nav.Link>
-          <Nav.Link id="tryPremium" className=" d-flex  " href="#home">
+          <Nav.Link id="tryPremium" className="d-flex  " href="#home">
             Try Premium for free
           </Nav.Link>
         </Nav>
