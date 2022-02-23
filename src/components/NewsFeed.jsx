@@ -1,7 +1,9 @@
 
 import { Container, Row, Col } from "react-bootstrap"
+import AddToFeed from "./AddToFeed"
 import Header from "./Header"
 import HeaderMini from "./HeaderMini"
+import MyNavBarMini from "./MyNavbarMini"
 import PostAdd from "./PostAdd"
 import PostArea from "./PostArea"
 import TagSection from "./TagSection"
@@ -12,7 +14,6 @@ const NewsFeed = () => {
         <Container id="page">
         <Row>
             <Col className="col-12 col-md-3">
-            <div>Left column</div>
             <HeaderMini />
             <TagSection />
            
@@ -22,7 +23,8 @@ const NewsFeed = () => {
             <PostArea />
             </Col>
             <Col className="col-12 col-md-3">
-     <div>Right column</div>
+                <AddToFeed />
+     <MyNavBarMini />
             </Col>
             </Row>
 
