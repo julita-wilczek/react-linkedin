@@ -85,10 +85,10 @@ const fetchData = async () => {
               </Modal.Header>
            
     <div>
-        <Form className="m-3" style={{fontSize:"14px"}}>
-      <small>* Indicates required</small>  
+        <Form className="mx-3 mt-3 mb-1" style={{fontSize:"14px"}}>
+      <div className="text-muted"><small>* Indicates required</small></div> 
         <Form.Group>
-          <Form.Label className="text-muted mb-0">First Name*</Form.Label>
+          <Form.Label className="text-muted mt-2 mb-0">First Name*</Form.Label>
           <Form.Control
             type="text"
             value={profile.name}
