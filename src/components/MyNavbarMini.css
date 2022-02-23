@@ -1,0 +1,32 @@
+.mainsticky {
+ font-size:12px;
+ position:sticky;
+ top:100px
+}
+#dropdown-basic-button{
+    font-size: 12px!important;
+    background-color: #f3f2ef;
+    color: #6c757d!important;
+    font-family: inherit;
+    font-weight: 600;
+  }
+  .optionDrop {
+    color: black !important;
+    font-size: 12px;
+  }
+  .optionDrop:hover {
+    color: rgb(20, 23, 189) !important;
+  }
+  #dropdown-basic-button {
+    border: 0px solid white;
+    margin-left: 0;
+    padding: 0;
+  }
+
+.adv{
+    margin-top: 0.5px
+}
+
+.choices{
+    margin-bottom: 0.5px
+}

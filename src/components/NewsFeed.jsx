@@ -12,6 +12,7 @@ import TagSection from "./TagSection"
 import PromotedSection from "./PromotedSection";
 import { useState } from "react"
 
+
 const NewsFeed = () => {
 
   const [modal, setModal] = useState(false)
@@ -34,7 +35,11 @@ const NewsFeed = () => {
             </Col>
             <Col className="col-12 col-md-3">
                 <AddToFeed />
+
+                
+
                <PromotedSection />
+
      <MyNavBarMini />
             </Col>
             </Row>
