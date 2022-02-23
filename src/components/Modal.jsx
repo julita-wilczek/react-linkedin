@@ -7,8 +7,16 @@ const MyModal = ({setExperience, setModal, experienceId, experience, modal, setR
 const [postMode, setPostMode] = useState(false)
 const [editMode, setEditMode] = useState(false)
 
+const PostModeOn = () => {
+  setPostMode(true)
+  setEditMode(false)
+}
 
-useEffect(() => {experienceId === "" ? setPostMode(true) : setEditMode(true)},[experienceId])
+const EditModeOn = () => {
+  setEditMode(true) 
+  setPostMode(false)
+}
+useEffect(() => {experienceId === "" ? PostModeOn() : EditModeOn()},[experienceId])
 
  const deleteExperience = async () => {
    try{
