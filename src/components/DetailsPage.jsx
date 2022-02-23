@@ -8,6 +8,7 @@
 const DetailsPage = () => {
     
     return(<> 
+     <>
     <Container id="page">
         <Row>
             <Col className="col-8">
@@ -17,8 +18,10 @@ const DetailsPage = () => {
                 <div>Here put some other component to edit end stuff</div>
             </Col>
         </Row>
-    <MyFooter />
+    
     </Container>
+    <MyFooter />
+   </>
     
     
     </>)

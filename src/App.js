@@ -4,6 +4,7 @@ import ProfilePage from "./components/ProfilePage";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css"
 import DetailsPage from "./components/DetailsPage";
+import NewsFeed from "./components/NewsFeed";
 
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
     <BrowserRouter>
     <MyNavbar />
     <Routes>
-    <Route path="*" element={<ProfilePage />} />
+    <Route path="*" element={<NewsFeed />} />
       <Route path="/in/me" element={<ProfilePage />} />
       <Route path="/in/:profileId" element={<ProfilePage />} />
       <Route path="/in/details/:profileId/" element={<DetailsPage />}/>
