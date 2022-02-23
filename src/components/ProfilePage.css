@@ -56,8 +56,9 @@ hr:last-child {
   color: rgba(0, 0, 0, 0.6);
   border: none;
   margin: none;
-  padding-right: 8px;
-  padding-left: 8px;
+  padding-right: 12px;
+  padding-left: 12px;
+  border-radius: 50px;
 }
 
 
@@ -115,7 +116,8 @@ hr:last-child {
   padding: 10px 0px 10px 16px;
 }
 
-.topPost #startPostButton:hover, .topPost .post-buttons:hover, .singlePost .post-buttons:hover, .singlePost .moreButton:hover {
+.topPost #startPostButton:hover, .topPost .post-buttons:hover, .singlePost .post-buttons:hover, .singlePost .moreButton:hover,
+#postModal .postFooterbuttons:hover {
   background-color: rgba(0, 0, 0, 0.1);
   color: rgba(0, 0, 0, 0.6);
 } 
