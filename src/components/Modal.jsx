@@ -7,8 +7,16 @@ const MyModal = ({setExperience, setModal, experienceId, experience, modal, setR
 const [postMode, setPostMode] = useState(false)
 const [editMode, setEditMode] = useState(false)
 
+const PostModeOn = () => {
+  setPostMode(true)
+  setEditMode(false)
+}
 
-useEffect(() => {experienceId === "" ? setPostMode(true) : setEditMode(true)},[experienceId])
+const EditModeOn = () => {
+  setEditMode(true) 
+  setPostMode(false)
+}
+useEffect(() => {experienceId === "" ? PostModeOn() : EditModeOn()},[experienceId])
 
  const deleteExperience = async () => {
    try{
@@ -82,13 +90,13 @@ const hideModal = () => {
                 <div style={{fontSize: "19px"}}>Edit experience</div>
               </Modal.Header>
               <EditForm expId={experienceId} setExperience={setExperience} experience={experience}/>
-              <Modal.Footer className="d-flex justify-content-between">
-                {editMode && (<><Button id="deleteButton" onClick={()=>{deleteExperience()}}>
+              <Modal.Footer>
+                {editMode && (<div className="d-flex w-100 justify-content-between"><Button id="deleteButton" onClick={()=>{deleteExperience()}}>
                  Delete experience </Button>
-                <Button id="saveButton" onClick={()=>{saveChanges()}}>Save </Button></>)}
-                {postMode && (<Button id="saveButton" onClick={()=>{postExperience()}}>
+                <Button id="saveButton" onClick={()=>{saveChanges()}}>Save </Button></div>)}
+                {postMode && (<div className="d-flex justify-content-left"><Button id="saveButton" onClick={()=>{postExperience()}}>
                   Post
-                </Button>)}
+                </Button></div>)}
               </Modal.Footer>
             </Modal>
     </>)

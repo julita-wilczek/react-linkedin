@@ -23,7 +23,7 @@ const ProfilePage = () => {
             <Row>
                 <Col className="col-12 col-md-8">
                     <Header personalData={personalData} setPersonalData={setPersonalData}/>
-                    <ProfileSection name="About" card="about" />
+                    <ProfileSection name="About" card="about" bio={personalData.bio} />
                     <ProfileSection name="Activity" card={<ActivityCard />} />
                     <ProfileSection name="Experience" card={<ExperienceCard />} />
                     <ProfileSection name="Education" card={<EducationCard />} />

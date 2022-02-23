@@ -1,4 +1,4 @@
-import { Button } from 'react-bootstrap'
+import { Button, Row } from 'react-bootstrap'
 
 const ActivityCard = () => {
   return (
@@ -15,13 +15,12 @@ const ActivityCard = () => {
         </Button>
       </div>
       <div className="font-weight-normal">You haven't posted lately</div>
-      <small>Recent posts you share or comment on will be displayed here</small>
-      <hr className="ml-n3" width="105%" />
-      <div className="my-n2">
-        <Button id="activityButton">See all activity</Button>
-      </div>
+      <div className='mb-2'><small>Recent posts you share or comment on will be displayed here</small></div>
+      <div className="d-flex flex-row"><div id="activityButton" className="py-2">See all activity</div></div>
     </>
   )
 }
 
 export default ActivityCard
+
+//<hr className="ml-n3" width="105%" />

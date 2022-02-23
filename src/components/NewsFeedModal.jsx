@@ -76,7 +76,7 @@ const enableButton = (e) => {
   
               <Modal.Footer style={{border: "none"}} className="ml-n2 d-flex justify-content-between">
                   <div className="d-flex align-items-center">
-                  <div style={{borderRight: "1px solid rgba(0, 0, 0, 0.2)"}}>
+                  <div className="pr-2" style={{borderRight: "1px solid rgba(0, 0, 0, 0.08)"}}>
         <Button className="postFooterbuttons" ><i className="bi bi-image"></i></Button>
         <Button className="postFooterbuttons" ><i className="bi bi-play-btn-fill"></i></Button>
         <Button className="postFooterbuttons" ><i className="bi bi-file-earmark-text-fill"></i></Button>

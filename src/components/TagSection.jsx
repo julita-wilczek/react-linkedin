@@ -1,11 +1,30 @@
 // Component for News Feed Page
 // Left Hand Side component
 import "./TagSection.css";
-import { Container, Col, Row } from "react-bootstrap";
+import { Container, Col, Row, Button } from "react-bootstrap";
+import { useState } from "react";
 
 const TagSection = () => {
+
+  const [showMore, setShowMore] = useState(true)
+  const [showLess, setShowLess] = useState(false)
+  const [visibility, setVisibility] = useState(false)
+
+  const showMoreFunction = () => {
+    setShowMore(false)
+    setShowLess(true)
+    document.getElementById("tagSectionContainer").classList.remove("d-none")
+  }
+
+  const showLessFunction = () => {
+    setShowMore(true)
+    setShowLess(false)
+    document.getElementById("tagSectionContainer").classList.add("d-none")
+  } 
   return (
-    <Container id="tagSectionContainer" className="px-0">
+    <>
+    {showMore && (<Button onClick={showMoreFunction} className="tag-button d-block d-md-none">Show More <i style={{fontSize:"13px"}} className="bi bi-chevron-compact-down"></i></Button>)}
+    <Container id="tagSectionContainer" className="px-0 d-none d-md-inline-block">
       <Col className="px-0">
         <Row className="flex-column my-3 mx-3">
           <div className="fontSizeRecent">Recent</div>
@@ -59,6 +78,8 @@ const TagSection = () => {
         </Row>
       </Col>
     </Container>
+    {showLess && (<Button onClick={showLessFunction} className="tag-button d-block d-md-none">Show Less <i style={{fontSize:"13px"}} class="bi bi-chevron-compact-up"></i></Button>)}
+    </>
   );
 };
 
