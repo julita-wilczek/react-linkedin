@@ -45,7 +45,9 @@ hr:last-child {
 }
 .profileSection,
 .peopleSection,
+
 #learningSection, #header, #topPost, .singlePost {
+
   background-color: white;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -56,7 +58,8 @@ hr:last-child {
   border-style: solid;
 }
 
-.peopleSection button, #header button:nth-of-type(3) {
+.peopleSection button,
+#header button:nth-of-type(3) {
   border-radius: 1rem;
   background-color: white;
   color: rgba(0, 0, 0, 0.6);
@@ -100,6 +103,7 @@ hr:last-child {
 
 #deleteButton 
 { border: none!important;
+
   background-color: white;
   color: rgba(0, 0, 0, 0.6);
   font-weight: 600;
@@ -108,58 +112,59 @@ hr:last-child {
   padding: 3px 16px !important;
 }
 
-.peopleSection button:hover, #header button:nth-of-type(3):hover, #deleteButton:hover {
-    background-color: rgba(0, 0, 0, 0.1);
-    border-width: 2px;
+.peopleSection button:hover,
+#header button:nth-of-type(3):hover,
+#deleteButton:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-width: 2px;
 }
-
 
 .peopleSection .card {
   border: none;
 }
 
-#header button:first-of-type, #saveButton
-{
-    border-radius: 1rem;
-    font-weight: 600;
-    border-width: 1.5px;
-    border-color: #0a66c2!important;
-    font-size: 16px;
-    padding: 3px 16px !important;
-    background-color: #0a66c2!important;
-  }
+#header button:first-of-type,
+#saveButton {
+  border-radius: 1rem;
+  font-weight: 600;
+  border-width: 1.5px;
+  border-color: #0a66c2 !important;
+  font-size: 16px;
+  padding: 3px 16px !important;
+  background-color: #0a66c2 !important;
+}
 
-  #header button:nth-of-type(2){
-    border-radius: 1rem;
-    font-weight: 600;
-    border-width: 1.5px;
-    border-color: #0a66c2!important;
-    font-size: 16px;
-    padding: 3px 16px !important;
-    background-color: white!important;
-    color:#0a66c2!important;
-  }
+#header button:nth-of-type(2) {
+  border-radius: 1rem;
+  font-weight: 600;
+  border-width: 1.5px;
+  border-color: #0a66c2 !important;
+  font-size: 16px;
+  padding: 3px 16px !important;
+  background-color: white !important;
+  color: #0a66c2 !important;
+}
 
-  #header button:nth-of-type(2):hover {
-      background-color: rgb(10, 102, 194, 0.1)!important;
-      border-width: 2px;
-  }
+#header button:nth-of-type(2):hover {
+  background-color: rgb(10, 102, 194, 0.1) !important;
+  border-width: 2px;
+}
 
-  #header button:first-of-type:hover, #saveButton:hover {
-    background-color: #004182!important;
-    border-color: #004182!important;
-  }
+#header button:first-of-type:hover,
+#saveButton:hover {
+  background-color: #004182 !important;
+  border-color: #004182 !important;
+}
 
- 
-  #form {
-    background-color: white;
-    color: rgba(0, 0, 0, 0.6);
-    font-size: 16px;
-    padding: 3px 16px !important;
-  }
+#form {
+  background-color: white;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 16px;
+  padding: 3px 16px !important;
+}
 
- #form .form-label, #form .form-control::placeholder {
-   font-weight: 400!important;
-   font-size: 14px;
- }
-
+#form .form-label,
+#form .form-control::placeholder {
+  font-weight: 400 !important;
+  font-size: 14px;
+}

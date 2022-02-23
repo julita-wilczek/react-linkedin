@@ -1,3 +1,4 @@
+
 import { Container, Row, Col } from "react-bootstrap"
 import Header from "./Header"
 import HeaderMini from "./HeaderMini"
@@ -24,10 +25,9 @@ const NewsFeed = () => {
      <div>Right column</div>
             </Col>
             </Row>
+
     </Container>
+  );
+};
 
-
-    )
-}
-
-export default NewsFeed
+export default NewsFeed;
