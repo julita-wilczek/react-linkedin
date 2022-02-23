@@ -7,7 +7,7 @@ import MyNavBarMini from "./MyNavbarMini"
 import PostAdd from "./PostAdd"
 import PostArea from "./PostArea"
 import TagSection from "./TagSection"
-import StickyFooter from "./StickyFooter"
+
 
 const NewsFeed = () => {
     return (
@@ -25,7 +25,7 @@ const NewsFeed = () => {
             </Col>
             <Col className="col-12 col-md-3">
                 <AddToFeed />
-                <StickyFooter />
+                
      <MyNavBarMini />
             </Col>
             </Row>
