@@ -5,7 +5,7 @@ import { useLocation, useNavigate } from "react-router-dom"
 import { Button } from "react-bootstrap"
 import MyModal from "./Modal";
 
-const ProfileSection = ({ name, card }) => {
+const ProfileSection = ({ name, card, bio }) => {
 
     const [editMode, setEditMode] = useState(false)
     const location = useLocation()
@@ -26,7 +26,7 @@ const ProfileSection = ({ name, card }) => {
     const [reload, setReload] = useState(null)
 
 
-    const content = card !== "about" ? card : <div>I have over 15 years of experience working in data science. Currently, I work as Asana’s Senior Data Manager, improving products and services for our customers by using advanced analytics, standing up big-data analytical tools, creating and maintaining models, and onboarding compelling new data sets.</div>
+    const content = card !== "about" ? card : <div>{bio}</div>
     return (
         <div className="profileSection">
             <div className="d-flex justify-content-between">

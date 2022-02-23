@@ -47,6 +47,8 @@ hr:last-child {
   margin: 0px;
 }
 
+
+
 .editButton:hover, #activityButton:hover {
   background-color: rgba(0, 0, 0, 0.1) !important;
 }
@@ -173,7 +175,7 @@ hr:last-child {
   border: none;
 }
 
-#header button:first-of-type,
+#header button:first-of-type:not(.editButton),
 #saveButton, #postButton {
   border-radius: 1rem;
   font-weight: 600;
@@ -216,7 +218,7 @@ hr:last-child {
   border-width: 2px;
 }
 
-#header button:first-of-type:hover,
+#header button:first-of-type:hover:not(.editButton),
 #saveButton:hover {
   background-color: #004182 !important;
   border-color: #004182 !important;

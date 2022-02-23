@@ -90,13 +90,13 @@ const hideModal = () => {
                 <div style={{fontSize: "19px"}}>Edit experience</div>
               </Modal.Header>
               <EditForm expId={experienceId} setExperience={setExperience} experience={experience}/>
-              <Modal.Footer className="d-flex justify-content-between">
-                {editMode && (<><Button id="deleteButton" onClick={()=>{deleteExperience()}}>
+              <Modal.Footer>
+                {editMode && (<div className="d-flex w-100 justify-content-between"><Button id="deleteButton" onClick={()=>{deleteExperience()}}>
                  Delete experience </Button>
-                <Button id="saveButton" onClick={()=>{saveChanges()}}>Save </Button></>)}
-                {postMode && (<Button id="saveButton" onClick={()=>{postExperience()}}>
+                <Button id="saveButton" onClick={()=>{saveChanges()}}>Save </Button></div>)}
+                {postMode && (<div className="d-flex justify-content-left"><Button id="saveButton" onClick={()=>{postExperience()}}>
                   Post
-                </Button>)}
+                </Button></div>)}
               </Modal.Footer>
             </Modal>
     </>)
