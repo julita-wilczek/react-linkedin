@@ -83,11 +83,12 @@ hr:last-child {
   padding: 10px 0px 10px 16px;
 }
 
-#topPost #startPostButton:hover, #topPost .post-buttons:hover {
+#topPost #startPostButton:hover, #topPost .post-buttons:hover, .singlePost .post-buttons:hover, .singlePost .moreButton:hover {
   background-color: rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.6);
 } 
 
-#topPost .post-buttons {
+#topPost .post-buttons, .singlePost .post-buttons {
   background: none;
   font-size: 14px;
   font-weight: 600;
@@ -95,11 +96,20 @@ hr:last-child {
   border: none;
 }
 
-#topPost .post-buttons i {
+#topPost .post-buttons i, .singlePost .post-buttons i {
   font-size: 20px;
   font-weight: 900;
 }
 
+.singlePost .moreButton{
+  width: 24px;
+  height: 24px;
+  background: none;
+  color: rgba(0, 0, 0, 0.6);
+  border: none;
+  border-radius: 50%;
+ 
+}
 
 #deleteButton 
 { border: none!important;
