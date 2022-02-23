@@ -175,6 +175,12 @@ hr:last-child {
   background-color: #0a66c2 !important;
 }
 
+.postTitle {
+  width: 400px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 #header button:nth-of-type(2) {
   border-radius: 1rem;
   font-weight: 600;

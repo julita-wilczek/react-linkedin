@@ -14,7 +14,7 @@ const Post = ({text, name, surname, title, image, date, key}) => {
 <div className="d-flex">
     <Image alt="profile-Image" style={{borderRadius: "50%", objectFit:"cover"}} height="48px" width="48px" src={image}></Image>
     <div className="ml-2 d-flex flex-column"><div style={{fontSize:"14px", fontWeight:"600"}}>{name} {surname}</div>
-    <div style={{fontSize:"12px"}} className="text-muted"> {title} </div>
+    <div style={{fontSize:"12px"}} className="text-muted postTitle"> {title} </div>
     
 <div style={{fontSize:"12px"}} className="text-muted">{posted} • <i className="bi bi-globe" style={{fontSize:"12px"}} ></i></div>
     </div></div><div className=""><Button className="moreButton d-flex align-items-center justify-content-center" ><i class="bi bi-three-dots"></i></Button></div> </div>
