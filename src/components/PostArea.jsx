@@ -3,9 +3,10 @@
 import { useEffect, useState } from "react"
 import Post from "./Post"
 
-const PostArea = () => {
+const PostArea = ({reload}) => {
 
 useEffect(() => {fetchPost()}, [])
+useEffect(() => {fetchPost()}, [reload])
 
 const[posts, setPosts] = useState([])
 
@@ -20,7 +21,8 @@ try {
     if (response.ok) {
         let data = await response.json();
         let filteredData = data.filter((element) => element.text.length > 200 && (element.username !== "Mohammadamin") && (element.username !== "TommysTurnips"))
-        setPosts(filteredData)
+        let fromNewest = filteredData.reverse()
+        setPosts(fromNewest)
         console.log(filteredData)
     }
 }

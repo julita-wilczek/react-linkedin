@@ -1,19 +1,71 @@
-import { Card, Image, Button } from "react-bootstrap"
+import { Container, Row, Col, Image, Button } from "react-bootstrap";
+import "./AddToFeed.css";
 
 const AddToFeed = () => {
-    return(<div>
-<Card className='addToFeed d-flex flex-row mb-n3'>
-<Image className='userImage' src="https://media-exp1.licdn.com/dms/image/C4D0BAQGSvPnpfpc1qA/company-logo_100_100/0/1619541356425?e=1653523200&v=beta&t=-x99dn-ga67TXf4HiBChfxLbpPO2KuSC99FBJPXwKcI" />
-            <Card.Body>
-                <Card.Title className='peopleName'>Name Surname</Card.Title>
-                <Card.Text className='peopleDescription text-muted'>
-                Description
-                </Card.Text>
-                <Button>+ Follow</Button>
-            </Card.Body>
-        </Card>
+  return (
+    <Container id="feedContainer">
+      <div className="d-flex justify-content-between mt-2">
+        <div id="titleFeedCard">Add to your feeds</div>
+        <i id="infoIcon" class="bi bi-info-square-fill"></i>
+      </div>
+      <Col>
+        <Row className="pl-0 my-3 feedProfile">
+          <Image className="imgFeed pl-0" src="https://picsum.photos/200" />
+          <div className="ml-2">
+            <div className="feedTitle">Foreign Policy</div>
+            <div className="feedJobType">Publishing</div>
+            <div className="d-flex flex-row">
+              <div
+                className="rounded-pill ButtonFollow"
+                variant="outline-secondary"
+              >
+                <i class="bi bi-plus"></i>
+                Follow
+              </div>
+            </div>
+          </div>
+        </Row>
+        <Row className="pl-0 my-3 feedProfile">
+          <Image className="imgFeed pl-0" src="https://picsum.photos/200" />
+          <div className="ml-2">
+            <div className="feedTitle">International Group</div>
+            <div className="feedJobType">Import-Export</div>
+            <div className="d-flex flex-row">
+              <div
+                className="rounded-pill ButtonFollow"
+                variant="outline-secondary"
+              >
+                <i class="bi bi-plus"></i>
+                Follow
+              </div>
+            </div>
+          </div>
+        </Row>
+        <Row className="pl-0 my-3 feedProfile">
+          <Image className="imgFeed pl-0" src="https://picsum.photos/200" />
+          <div className="ml-2">
+            <div className="feedTitle">Magda Lena</div>
+            <div className="feedJobType">Manager-HR</div>
+            <div className="d-flex flex-row">
+              <div
+                className="rounded-pill ButtonFollow"
+                variant="outline-secondary"
+              >
+                <i class="bi bi-plus"></i>
+                Follow
+              </div>
+            </div>
+          </div>
+        </Row>
+        <Row>
+          <div className="d-flex feedProfile" id="viewAllRecomandation">
+            <div className="mt-1">View All Recommandation</div>
+            <i class="bi bi-arrow-right ml-2 " id="arrowFeed"></i>
+          </div>
+        </Row>
+      </Col>
+    </Container>
+  );
+};
 
-    </div>)
-}
-
-export default AddToFeed
+export default AddToFeed;

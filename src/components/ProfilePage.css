@@ -43,10 +43,31 @@ hr:last-child {
 .editButton:hover {
   background-color: rgba(0, 0, 0, 0.1) !important;
 }
+
+
+.topPost div:nth-of-type(2) button {
+  margin-top: -10px;
+}
+
+#postModal .postFooterbuttons {
+  background: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.6);
+  border: none;
+  margin: none;
+  padding-right: 8px;
+  padding-left: 8px;
+}
+
+
+
+.topPost div:nth-of-type(2) button i {
+  margin-right: 10px;
+}
 .profileSection,
 .peopleSection,
-
-#learningSection, #header, #topPost, .singlePost {
+#learningSection, #header, .topPost, .singlePost {
 
   background-color: white;
   margin-top: 20px;
@@ -70,7 +91,18 @@ hr:last-child {
   padding: 3px 16px !important;
 }
 
-#topPost #startPostButton
+#sharingSettings {
+  background: none; 
+  border-radius: 1.5rem;
+  color: rgba(0, 0, 0, 0.6);
+  border-color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  font-weight: 600;
+  border-width: 1.5px;
+  padding: 2px 12px;
+
+}
+.topPost #startPostButton
 {
   border-radius: 5rem;
   width: 90%;
@@ -83,12 +115,12 @@ hr:last-child {
   padding: 10px 0px 10px 16px;
 }
 
-#topPost #startPostButton:hover, #topPost .post-buttons:hover, .singlePost .post-buttons:hover, .singlePost .moreButton:hover {
+.topPost #startPostButton:hover, .topPost .post-buttons:hover, .singlePost .post-buttons:hover, .singlePost .moreButton:hover {
   background-color: rgba(0, 0, 0, 0.1);
   color: rgba(0, 0, 0, 0.6);
 } 
 
-#topPost .post-buttons, .singlePost .post-buttons {
+.topPost .post-buttons, .singlePost .post-buttons {
   background: none;
   font-size: 14px;
   font-weight: 600;
@@ -96,7 +128,7 @@ hr:last-child {
   border: none;
 }
 
-#topPost .post-buttons i, .singlePost .post-buttons i {
+.topPost .post-buttons i, .singlePost .post-buttons i {
   font-size: 20px;
   font-weight: 900;
 }
@@ -133,7 +165,7 @@ hr:last-child {
 }
 
 #header button:first-of-type,
-#saveButton {
+#saveButton, #postButton {
   border-radius: 1rem;
   font-weight: 600;
   border-width: 1.5px;
@@ -143,6 +175,12 @@ hr:last-child {
   background-color: #0a66c2 !important;
 }
 
+.postTitle {
+  width: 400px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 #header button:nth-of-type(2) {
   border-radius: 1rem;
   font-weight: 600;
