@@ -9,14 +9,14 @@ const NewsFeed = () => {
         <Container id="page">
         <Row>
             <Col className="col-12 col-md-3">
-            <div>Right column</div>
+            <div>Left column</div>
             <HeaderMini />
             <TagSection />
            
             </Col>
             <Col className="col-12 col-md-6">  <div>Center column</div></Col>
             <Col className="col-12 col-md-3">
-     <div>Left column</div>
+     <div>Right column</div>
             </Col>
             </Row>
     </Container>
