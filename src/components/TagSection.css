@@ -10,6 +10,23 @@
   border: 1px solid rgb(226, 225, 225);
 }
 
+.tag-button {
+  margin: 8px 0px -10px;
+  padding: 2px 8px;
+  width: 100%;
+  background: none; 
+  color: rgba(0, 0, 0, 0.6);
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.tag-button:hover {
+  background-color: rgba(0, 0, 0, 0.1) !important;
+  color: rgba(0, 0, 0, 0.6); 
+}
+
+
 .recentTags:hover {
   cursor: pointer;
   background-color: rgba(228, 227, 227, 0.89);
