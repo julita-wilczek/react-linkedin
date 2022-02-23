@@ -12,6 +12,17 @@
   border: 1px solid rgb(226, 225, 225);
 }
 
+button:focus-visible {
+  outline-color: white!important
+}
+
+*:focus, *:focus-visible
+{
+  outline: none!important;
+  box-shadow: none!important;
+
+}
+
 #userImage {
   height: 40%;
   width: 30%;
