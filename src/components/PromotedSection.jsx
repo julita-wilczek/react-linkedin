@@ -12,7 +12,7 @@ const PromotedSection = () => {
         <Row className="pl-0 my-3 feedProfile">
           <Col className="pl-0 d-flex infoPromoted">
             <Image
-              className="imgFeed pl-0 d-flex"
+              className="imgPromoted mr-2 pl-0 d-flex"
               src="https://picsum.photos/200"
             />
             <div className="infoPromoted">
@@ -29,7 +29,7 @@ const PromotedSection = () => {
         <Row className="pl-0 my-3 feedProfile">
           <Col className="pl-0 d-flex infoPromoted">
             <Image
-              className="imgFeed pl-0 d-flex"
+              className="imgPromoted mr-2 pl-0 d-flex"
               src="https://picsum.photos/200"
             />
             <div className="infoPromoted">
@@ -48,7 +48,7 @@ const PromotedSection = () => {
         <Row className="pl-0 my-3 feedProfile">
           <Col className="pl-0 d-flex infoPromoted">
             <Image
-              className="imgFeed pl-0 d-flex"
+              className="imgPromoted mr-2 pl-0 d-flex"
               src="https://picsum.photos/200"
             />
             <div className="infoPromoted">
