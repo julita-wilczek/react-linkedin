@@ -175,6 +175,16 @@ hr:last-child {
   background-color: #0a66c2 !important;
 }
 
+#postButton:disabled {
+  background-color: rgba(0, 0, 0, 0.08)!important;
+  border-color: rgba(0, 0, 0, 0.0)!important;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  border-radius: 0.5rem!important;
+  width: 552px!important;
+}
 .postTitle {
   width: 400px;
   white-space: nowrap;
