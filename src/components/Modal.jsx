@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Modal, Button } from "react-bootstrap"
 import EditForm from "./EditForm";
 
-const MyModal = ({setExperience, setModal, experienceId, experience, modal}) => {
+const MyModal = ({setExperience, setModal, experienceId, experience, modal, setReload}) => {
 const [postMode, setPostMode] = useState(false)
 const [editMode, setEditMode] = useState(false)
 
@@ -20,6 +20,8 @@ useEffect(() => {experienceId === "" ? setPostMode(true) : setEditMode(true)},[e
   );
   if (response.ok) {
     console.log("success!!")
+    setModal(false)
+    setReload(response)
     } 
 } catch (error) {
   console.log(error);
@@ -40,6 +42,8 @@ useEffect(() => {experienceId === "" ? setPostMode(true) : setEditMode(true)},[e
  if (response.ok) {
    console.log(response.json)
    console.log("experience updated")
+   setModal(false)
+   setReload(response)
    } 
 } catch (error) {
  console.log(error);
@@ -60,6 +64,8 @@ const postExperience = async () => {
  if (response.ok) {
    console.log(response.json)
    console.log("experience updated")
+   setModal(false)
+   setReload(response)
    } 
 } catch (error) {
  console.log(error);

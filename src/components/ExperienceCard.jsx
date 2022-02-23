@@ -5,7 +5,7 @@ import { parseISO, format } from "date-fns";
 import { useParams, useLocation } from "react-router-dom";
 
 
-const ExperienceCard = ({ edit, setModal, setExperienceId, setVisibility}) => {
+const ExperienceCard = ({ edit, reload, setModal, setExperienceId, setVisibility}) => {
   const [editMode, setEditMode] = useState(false);
   const [experiences, setExperiences] = useState([]);
   const params = useParams();
@@ -23,6 +23,11 @@ const ExperienceCard = ({ edit, setModal, setExperienceId, setVisibility}) => {
   useEffect(() => {
     fetchData();
   }, []);
+
+  useEffect(() => {
+    fetchData();
+  }, [reload]);
+
 
   const fetchData = async () => {
     try {
