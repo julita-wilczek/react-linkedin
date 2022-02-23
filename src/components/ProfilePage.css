@@ -45,8 +45,9 @@ hr:last-child {
 }
 .profileSection,
 .peopleSection,
-#learningSection,
-#header {
+
+#learningSection, #header, #topPost, .singlePost {
+
   background-color: white;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -69,8 +70,40 @@ hr:last-child {
   padding: 3px 16px !important;
 }
 
-#deleteButton {
-  border: none !important;
+#topPost #startPostButton
+{
+  border-radius: 5rem;
+  width: 90%;
+  text-align: left;
+  background: none; 
+  color: rgba(0, 0, 0, 0.6);
+  border-color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 0px 10px 16px;
+}
+
+#topPost #startPostButton:hover, #topPost .post-buttons:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+} 
+
+#topPost .post-buttons {
+  background: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.6);
+  border: none;
+}
+
+#topPost .post-buttons i {
+  font-size: 20px;
+  font-weight: 900;
+}
+
+
+#deleteButton 
+{ border: none!important;
+
   background-color: white;
   color: rgba(0, 0, 0, 0.6);
   font-weight: 600;
