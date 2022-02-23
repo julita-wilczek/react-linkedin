@@ -23,6 +23,8 @@ const ProfileSection = ({ name, card }) => {
           endDate: "",
           description: "",
           area: "",})
+    const [reload, setReload] = useState(null)
+
 
     const content = card !== "about" ? card : <div>I have over 15 years of experience working in data science. Currently, I work as Asana’s Senior Data Manager, improving products and services for our customers by using advanced analytics, standing up big-data analytical tools, creating and maintaining models, and onboarding compelling new data sets.</div>
     return (
@@ -30,8 +32,8 @@ const ProfileSection = ({ name, card }) => {
             <div className="d-flex justify-content-between">
                 <h5 className="mb-3 d-inline-block">{name}</h5> {editMode && (<div><Button className="editButton" onClick={()=>{setModal(true)}}><i className="bi bi-plus-lg"></i></Button><Button className="editButton" onClick={() => { navigate('/in/details/6214aa4e0448b40015116892') }}><i className="bi bi-pencil"></i></Button></div>)}</div>
 
-            {cloneElement(content,{setModal, setExperienceId})}
-            {modal && <MyModal modal={modal} setModal={setModal} setExperience={setExperience} experienceId={experienceId} experience={experience}/>}
+            {cloneElement(content,{setModal, setExperienceId, reload})}
+            {modal && <MyModal modal={modal} setReload={setReload} setModal={setModal} setExperience={setExperience} experienceId={experienceId} experience={experience}/>}
         </div>
 
     )
