@@ -7,10 +7,6 @@ const MyModal = ({setExperience, setModal, experienceId, experience, modal, setR
 const [postMode, setPostMode] = useState(false)
 const [editMode, setEditMode] = useState(false)
 const [expImg, setExpImg] = useState(null)
-const [expId, setExpId] = useState("")
-
-useEffect(() => {setExpId(experienceId)}, [experienceId])
-
 
 const PostModeOn = () => {
   setPostMode(true)
@@ -53,7 +49,7 @@ useEffect(() => {experienceId === "" ? PostModeOn() : EditModeOn()},[experienceI
  }}
  );
  if (response.ok) {
-  uploadPicture()
+  uploadPicture(experienceId)
    } 
 } catch (error) {
  console.log(error);
@@ -73,8 +69,13 @@ try{
  );
  if (response.ok) {
    const data = await response.json()
- if (data) {  
-   setExpId(data._id)
+ if (data) { 
+   if (expImg !== null) {
+   uploadPicture(data._id)} 
+   else{
+    setModal(false)
+    setReload(response)
+   }
    } 
   
   }
@@ -83,9 +84,9 @@ try{
 }
 }
 
-useEffect(() => {uploadPicture()}, [expId])
 
-const uploadPicture = async () => {
+
+const uploadPicture = async (expId) => {
   
   console.log(expId)
   try {
