@@ -96,9 +96,9 @@ hr:last-child {
   color: rgba(0, 0, 0, 0.6);
   font-weight: 600;
   border-color: rgba(0, 0, 0, 0.6);
-  border-width: 1.5px;
   font-size: 16px;
   padding: 3px 16px !important;
+  box-sizing: border-box;
 }
 
 #sharingSettings {
@@ -166,9 +166,14 @@ hr:last-child {
 
 .peopleSection button:hover,
 #header button:nth-of-type(3):hover,
-#deleteButton:hover {
+#deleteButton:hover, .profileSection button:not(#activityButton, .editButton):hover {
   background-color: rgba(0, 0, 0, 0.1);
-  border-width: 2px;
+  border-color:rgba(0, 0, 0, 0.6);;
+  color: rgba(0, 0, 0, 0.6);
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  outline: 1px solid rgba(0, 0, 0, 0.6)!important;
 }
 
 .peopleSection .card {

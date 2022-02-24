@@ -59,7 +59,7 @@ const MyNavbar = () => {
           <Nav.Link
             className=" d-flex flex-column align-items-center justify-content-end"
             href="/in/me"
-            id="userImage"
+            id="userImg"
           >
             <Image
               id="UserImageNavbar"

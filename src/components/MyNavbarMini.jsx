@@ -149,7 +149,7 @@ const MyNavBarMini = () => {
               <div className="d-flex justify-content-center mt-2">
               <img
           className="mb-2"
-          id="linklogo"
+          id="linklogomini"
           src="https://blog.waalaxy.com/wp-content/uploads/2021/01/Linkedin-Logo.png"
           alt=""
         />
