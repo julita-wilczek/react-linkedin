@@ -6,6 +6,11 @@ import EditForm from "./EditForm";
 const MyModal = ({setExperience, setModal, experienceId, experience, modal, setReload}) => {
 const [postMode, setPostMode] = useState(false)
 const [editMode, setEditMode] = useState(false)
+const [expImg, setExpImg] = useState(null)
+const [expId, setExpId] = useState("")
+
+useEffect(() => {setExpId(experienceId)}, [experienceId])
+
 
 const PostModeOn = () => {
   setPostMode(true)
@@ -48,10 +53,7 @@ useEffect(() => {experienceId === "" ? PostModeOn() : EditModeOn()},[experienceI
  }}
  );
  if (response.ok) {
-   console.log(response.json)
-   console.log("experience updated")
-   setModal(false)
-   setReload(response)
+  uploadPicture()
    } 
 } catch (error) {
  console.log(error);
@@ -59,7 +61,7 @@ useEffect(() => {experienceId === "" ? PostModeOn() : EditModeOn()},[experienceI
 }
 
 const postExperience = async () => {
-  try{
+try{
   const response = await fetch("https://striveschool-api.herokuapp.com/api/profile/6214aa4e0448b40015116892/experiences/",
   {method: "POST", 
   body: JSON.stringify(experience),
@@ -70,14 +72,45 @@ const postExperience = async () => {
  }}
  );
  if (response.ok) {
-   console.log(response.json)
-   console.log("experience updated")
-   setModal(false)
-   setReload(response)
+   const data = await response.json()
+ if (data) {  
+   setExpId(data._id)
    } 
+  
+  }
 } catch (error) {
- console.log(error);
+  console.log(error)
 }
+}
+
+useEffect(() => {uploadPicture()}, [expId])
+
+const uploadPicture = async () => {
+  
+  console.log(expId)
+  try {
+    
+
+    const response = await fetch("https://striveschool-api.herokuapp.com/api/profile/6214aa4e0448b40015116892/experiences/" + expId +"/picture", {
+      method: "POST", 
+      body: expImg,
+      headers: {
+
+       Authorization:
+         "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjE0YWE0ZTA0NDhiNDAwMTUxMTY4OTIiLCJpYXQiOjE2NDU1MjE0ODcsImV4cCI6MTY0NjczMTA4N30.4JUxJJE6E2G8CkzqkOSSRICgdSveBWxuq1Ae6PFpsbs",
+     }
+    })
+
+    if (response.ok) {
+      setModal(false)
+      setReload(response)
+    } else {
+      console.log("sth wrong")
+    }
+
+  } catch (error) {
+    console.log(error)
+  }
 }
 
 const hideModal = () => {
@@ -89,7 +122,7 @@ const hideModal = () => {
               <Modal.Header closeButton>
                 <div style={{fontSize: "19px"}}>Edit experience</div>
               </Modal.Header>
-              <EditForm expId={experienceId} setExperience={setExperience} experience={experience}/>
+              <EditForm expId={experienceId} setExperience={setExperience} experience={experience} setExpImg={setExpImg}/>
               <Modal.Footer>
                 {editMode && (<div className="d-flex w-100 justify-content-between"><Button id="deleteButton" onClick={()=>{deleteExperience()}}>
                  Delete experience </Button>

@@ -6,12 +6,23 @@ import { Form, Button } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import { parseISO, format } from "date-fns";
 
-const EditForm = ({expId, setExperience, experience}) => {
+const EditForm = ({expId, setExperience, experience, setExpImg}) => {
   const [working, SetWorking] = useState(false);
 
   useEffect(() => {
     fetchData();
   }, []);
+
+
+  const experiencePicture = new FormData()
+
+const createPicture = (e) => {
+  if (e.target && e.target.files[0]) {
+    experiencePicture.append("experience", e.target.files[0] )
+    setExpImg(experiencePicture) // profile for profile picture, post for post picture, experience for experience picture
+  }
+
+} 
 
   const fetchData = async () => {
     try {
@@ -41,7 +52,6 @@ const EditForm = ({expId, setExperience, experience}) => {
         ...experience,
         [property]: value,
       })
-    console.log(experience)
   }
 
   const toggleCheckbox = () => {
@@ -122,6 +132,15 @@ const EditForm = ({expId, setExperience, experience}) => {
             placeholder="insert description"
             onChange={(e) => {handleChange("description", e.target.value)}}
           />
+        </Form.Group>
+        <Form.Group>
+          <Form.Label className="text-muted mb-0">Profile picture*</Form.Label>
+          <Form.Control
+            type="file"
+            name="file_upload"
+            onChange={createPicture}
+          /> 
+
         </Form.Group>
      
       </Form>

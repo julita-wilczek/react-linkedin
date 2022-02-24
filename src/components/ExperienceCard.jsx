@@ -59,7 +59,7 @@ const ExperienceCard = ({ edit, reload, setModal, setExperienceId, setVisibility
             className="mr-2"
             style={{ height: "50px" }}
             alt={exp.place}
-            src={exp["place-img"]}
+            src={exp.image}
           />
           <div>
               <div className="d-flex justify-content-between">
