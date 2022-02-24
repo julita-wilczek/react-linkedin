@@ -4,7 +4,7 @@ import { formatDistanceToNowStrict } from "date-fns"
 import {Image, Button} from "react-bootstrap"
 import { parseISO} from "date-fns";
 
-const Post = ({text, name, surname, title, image, date, key}) => {
+const Post = ({text, name, surname, title, image, date, key, imageUploaded}) => {
 
 
     const posted = formatDistanceToNowStrict(parseISO(date))
@@ -20,6 +20,7 @@ const Post = ({text, name, surname, title, image, date, key}) => {
     </div></div><div className=""><Button className="moreButton d-flex align-items-center justify-content-center" ><i class="bi bi-three-dots"></i></Button></div> </div>
     
     <div style={{fontSize:"14px"}}>{text}</div>
+    {imageUploaded !== undefined && (<div><img width="100%" alt="testpicture"src={imageUploaded}/></div>)}
     <hr />
     <div className="d-flex mt-3 justify-content-around mt-n2 mb-n3">
     <Button className="post-buttons d-flex align-items-center" ><i className="bi bi-hand-thumbs-up mr-1"></i> Like </Button>

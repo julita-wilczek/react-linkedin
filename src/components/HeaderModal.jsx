@@ -173,13 +173,12 @@ const fetchData = async () => {
           />
         </Form.Group>
         <Form.Group>
-          <Form.Label className="text-muted mb-0">Profile picture*</Form.Label>
+          <Form.Label className="text-muted mb-0">Profile Picture*</Form.Label>
           <Form.Control
             type="file"
             name="file_upload"
             onChange={createPicture}
           /> 
-
         </Form.Group>
         </Form>
     </div>

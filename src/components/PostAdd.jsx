@@ -4,7 +4,7 @@ const PostAdd = (props) => {
 
     // do the fetch
     return(
-    <Container className="topPost">
+    <Container className="topPost" style={{marginTop:"0px"}}>
     <div className="d-flex mt-n2">
         <Image alt="profile-Image" style={{borderRadius: "50%", objectFit:"cover"}} height="48px" width="48px" src="https://media-exp1.licdn.com/dms/image/C5603AQEN7LDogUjyfw/profile-displayphoto-shrink_100_100/0/1576483727686?e=1651104000&v=beta&t=nmywlNegu0DsNyviFr2tl9jbFVoflqPT1IQd-u89ZXA"></Image>
         <Button id="startPostButton" className="ml-2" onClick={() => {props.setModal(true)}}> Start a post</Button>

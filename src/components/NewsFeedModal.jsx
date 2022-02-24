@@ -1,8 +1,41 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Modal, Button, Image, Form } from "react-bootstrap"
 
 const NewsFeedModal = ({modal, setModal, setReload}) => {
 
+const postPicture = new FormData()
+const [postId, setPostId] = useState("")
+const createPicture = (e) => {
+    if (e.target && e.target.files[0]) {
+      postPicture.append("post", e.target.files[0] ) // profile for profile picture, post for post picture, experience for experience picture
+    }
+  } 
+
+const uploadPicture = async () => {
+
+    try {
+      const response = await fetch("https://striveschool-api.herokuapp.com/api/posts/" + postId, {
+        method: "POST", 
+        body: postPicture,
+        headers: {
+        "Access-Control-Allow-Origin": "*",
+         Authorization:
+           "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjE0YWE0ZTA0NDhiNDAwMTUxMTY4OTIiLCJpYXQiOjE2NDU1MjE0ODcsImV4cCI6MTY0NjczMTA4N30.4JUxJJE6E2G8CkzqkOSSRICgdSveBWxuq1Ae6PFpsbs",
+       }
+      })
+  
+      if (response.ok) {
+        setModal(false)
+        setReload(response)
+      } else {
+        console.log("sth wrong")
+      }
+  
+    } catch (error) {
+      console.log(error)
+    }
+  }
+  
 const [buttonStatus, setButtonStatus] = useState(true)
 const hideModal = () => {
   setModal(false)
@@ -36,15 +69,18 @@ const enableButton = (e) => {
        }}
        );
        if (response.ok) {
-         console.log(response.json)
-         console.log("post posted")
-         setModal(false)
-         setReload(response)
+        let data = await response.json()
+         if (data) {  
+   setPostId(data._id)
+   } 
+
          } 
       } catch (error) {
        console.log(error);
       }
       }
+
+      useEffect(() => {uploadPicture()}, [postId])
 
     return(<>
   <Modal id="postModal" onHide={hideModal} show={modal}>
@@ -77,7 +113,16 @@ const enableButton = (e) => {
               <Modal.Footer style={{border: "none"}} className="ml-n2 d-flex justify-content-between">
                   <div className="d-flex align-items-center">
                   <div className="pr-2" style={{borderRight: "1px solid rgba(0, 0, 0, 0.08)"}}>
-        <Button className="postFooterbuttons" ><i className="bi bi-image"></i></Button>
+                  <Form.Group style={{display:"inline-block"}}>
+          <Button className="postFooterbuttons"><Form.Label for="image-upload" className="mb-0"><i className="bi bi-image"></i></Form.Label></Button>
+          <Form.Control
+            type="file"
+            name="file_upload"
+            id="image-upload"
+            style={{display: "none"}}
+            onChange={createPicture}
+          /> 
+        </Form.Group>
         <Button className="postFooterbuttons" ><i className="bi bi-play-btn-fill"></i></Button>
         <Button className="postFooterbuttons" ><i className="bi bi-file-earmark-text-fill"></i></Button>
         <Button className="postFooterbuttons"><i className="bi bi-briefcase-fill"></i></Button>

@@ -32,7 +32,7 @@ catch (error) {
 }
 
 return(
-    posts.map(post => {return(<Post key={post._id} text={post.text} date={post.createdAt} image={post.user.image} name={post.user.name} surname={post.user.surname} title={post.user.title}/>)})
+    posts.map(post => {return(<Post key={post._id} imageUploaded={post.image} text={post.text} date={post.createdAt} image={post.user.image} name={post.user.name} surname={post.user.surname} title={post.user.title}/>)})
     )
 }
 
