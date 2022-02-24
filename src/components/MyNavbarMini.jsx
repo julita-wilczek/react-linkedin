@@ -1,5 +1,5 @@
 import "./MyNavbarMini.css";
-import {Dropdown, DropdownButton }from "react-bootstrap"
+import {Dropdown, DropdownButton, Modal, Button }from "react-bootstrap"
 
 const MyNavBarMini = () => {
   return (
@@ -100,28 +100,60 @@ const MyNavBarMini = () => {
                   rel="noopener noreferrer"
                   className="optionDrop"
                 >
-                  User Agreement
+                  Sales solution
                 </Dropdown.Item>
                 <Dropdown.Item
-                  href="https://www.linkedin.com/legal/cookie-policy"
+                  href="https://business.linkedin.com/sales-solutions?trk=flagship_nav&veh=li-header-dropdown-lss-control&src=li-nav"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="optionDrop"
                 >
-                  Cookie Policy
+                  Post a job for free
                 </Dropdown.Item>
                 <Dropdown.Item
-                  href="https://www.linkedin.com/legal/copyright-policy"
+                  href="https://business.linkedin.com/it-it/marketing-solutions/ads?lr=1"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="optionDrop"
                 >
-                  Copyright Policy
+                  Marketing Solutions
                 </Dropdown.Item>
+                <Dropdown.Item
+                  href="https://learning.linkedin.com/?trk=d_flagship3_nav&veh=learning_solutions&src=li-nav"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="optionDrop"
+                >
+                  Learning Solutions
+                </Dropdown.Item>
+                <Dropdown.Item
+                  href="https://www.linkedin.com/company/setup/new/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="optionDrop mt-2"
+                >
+                  Create a company Page
+                </Dropdown.Item>
+
+
+
+                
+                
               </DropdownButton>
               </div>
               <div className="compact-links4 d-flex justify-content-center">
-               <a className="mr-3 text-secondary" href="/">Get the Linkedin app</a> <a className=" text-secondary" href="/">More</a>
+              <Button size="small"  className="buttonsModal">Get the Linkedin app</Button>
+              <Button size="small"  className="buttonsModal ml-3">More</Button>
+              </div>
+
+              <div className="d-flex justify-content-center mt-2">
+              <img
+          className="mb-2"
+          id="linklogo"
+          src="https://blog.waalaxy.com/wp-content/uploads/2021/01/Linkedin-Logo.png"
+          alt=""
+        />
+        <div>LinkedIn Corporation © 2022</div>
               </div>
 
       
