@@ -19,7 +19,7 @@ const DetailsPage = () => {
                 <div className="editsection">
                     <div className="d-flex justify-content-between">
                        <a href="/"> <div className="text-secondary">Edit public profile & URL</div> </a>
-                       <i class="bi questionIcon bi-question-circle-fill"></i>
+                       <i class="bi questionIcon bi-question-circle-fill" title="Test"></i>
                     </div>
 
                     <div className="d-flex mt-2 justify-content-between">

@@ -18,6 +18,43 @@ const [profile, setProfile] = useState(
     }
 
 )
+ 
+
+const profilePicture = new FormData()
+
+const createPicture = (e) => {
+  if (e.target && e.target.files[0]) {
+    profilePicture.append("profile", e.target.files[0] ) // profile for profile picture, post for post picture, experience for experience picture
+  }
+  console.log(profilePicture)
+} 
+
+
+const uploadPicture = async () => {
+
+  try {
+
+    const response = await fetch("https://striveschool-api.herokuapp.com/api/profile/6214aa4e0448b40015116892/picture", {
+      method: "POST", 
+      body: profilePicture, 
+      headers: {
+
+       Authorization:
+         "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjE0YWE0ZTA0NDhiNDAwMTUxMTY4OTIiLCJpYXQiOjE2NDU1MjE0ODcsImV4cCI6MTY0NjczMTA4N30.4JUxJJE6E2G8CkzqkOSSRICgdSveBWxuq1Ae6PFpsbs",
+     }
+    })
+
+    if (response.ok) {
+      setModal(false)
+      setReload(response)
+    } else {
+      console.log("sth wrong")
+    }
+
+  } catch (error) {
+    console.log(error)
+  }
+}
 
 useEffect(()=>{fetchData()},[])
 
@@ -55,6 +92,7 @@ const fetchData = async () => {
       }
 
     const updateProfile = async () => {
+      
         try{
         const response = await fetch("https://striveschool-api.herokuapp.com/api/profile/",
         {method: "PUT", 
@@ -66,10 +104,7 @@ const fetchData = async () => {
        }}
        );
        if (response.ok) {
-         console.log(response.json)
-         console.log("profile updated")
-         setModal(false)
-         setReload(response)
+        uploadPicture()
 
          } 
       } catch (error) {
@@ -136,6 +171,15 @@ const fetchData = async () => {
             value={profile.email}
             onChange={(e) => {handleChange("email", e.target.value)}}
           />
+        </Form.Group>
+        <Form.Group>
+          <Form.Label className="text-muted mb-0">Profile picture*</Form.Label>
+          <Form.Control
+            type="file"
+            name="file_upload"
+            onChange={createPicture}
+          /> 
+
         </Form.Group>
         </Form>
     </div>
