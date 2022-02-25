@@ -53,7 +53,9 @@ hr:last-child {
   background-color: rgba(0, 0, 0, 0.1) !important;
 }
 
-
+#activity button:not(#activityButton):hover {
+  background-color: rgb(231, 228, 228);
+}
 .topPost div:nth-of-type(2) button {
   margin-top: -10px;
 }

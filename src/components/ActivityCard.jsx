@@ -7,7 +7,7 @@ const location = useLocation()
 
   return (
     <>
-      <div className="d-flex align-items-center justify-content-between">
+      <div id="activity" className="d-flex align-items-center justify-content-between">
         <div
           style={{ fontSize: '14px', color: 'rgba(0, 0, 0, 0.6)' }}
           className="mt-n3 mb-2"
