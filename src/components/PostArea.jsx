@@ -20,7 +20,7 @@ try {
     });
     if (response.ok) {
         let data = await response.json();
-        let filteredData = data.filter((element) => element.text.length > 200 && (element.username !== "Mohammadamin") && (element.username !== "TommysTurnips"))
+        let filteredData = data.filter((element) => element.text.length > 200 && (element.username !== "Mohammadamin") && (element.username !== "TommysTurnips") && (element.username !== "dollariyke")  && !(element.text.includes("Lorem ipsum")))
         let fromNewest = filteredData.reverse()
         setPosts(fromNewest)
         console.log(filteredData)
