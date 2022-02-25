@@ -13,7 +13,7 @@ const MyNavBarMini = () => {
           rel="noopener noreferrer"
           className="items"
         >
-          about
+          About
         </a>
 
         <a
