@@ -1,6 +1,4 @@
 
-import MayKnow from "../data/mayknow.json"
-import AlsoViewed from "../data/alsoviewed.json"
 import { Button, Card, Image } from 'react-bootstrap'
 import './PeopleCard.css'
 

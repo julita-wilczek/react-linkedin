@@ -10,12 +10,12 @@
 }
 
 
-.userImg {
+.userImgUpdated {
   width: 120px;
   height: 120px;
   border-radius: 50%;
   position: absolute;
-  top: 90px;
+  top: 60px;
 }
 
 .btns {

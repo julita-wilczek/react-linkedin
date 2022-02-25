@@ -5,7 +5,7 @@ import { useLocation, useNavigate } from "react-router-dom"
 import { Button } from "react-bootstrap"
 import MyModal from "./Modal";
 
-const ProfileSection = ({ name, card, bio }) => {
+const ProfileSection = ({name, card, bio }) => {
 
     const [editMode, setEditMode] = useState(false)
     const location = useLocation()
