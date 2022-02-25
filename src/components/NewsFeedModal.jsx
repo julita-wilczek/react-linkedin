@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect} from "react";
 import { Modal, Button, Image, Form } from "react-bootstrap";
 
 const NewsFeedModal = ({ modal, setModal, setReload }) => {
@@ -54,6 +54,35 @@ const NewsFeedModal = ({ modal, setModal, setReload }) => {
     console.log(post);
   };
 
+  const [pictureSrc, setPictureSrc] = useState("https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png")
+  const [name, setName] = useState("Name and Surname")
+    useEffect(() => {
+        fetchData()
+    }, [])
+    
+    
+    const fetchData = async () => {
+        try {
+            let response = await fetch("https://striveschool-api.herokuapp.com/api/profile/me", {
+                headers: {
+                    Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjE0YWE0ZTA0NDhiNDAwMTUxMTY4OTIiLCJpYXQiOjE2NDU1MjE0ODcsImV4cCI6MTY0NjczMTA4N30.4JUxJJE6E2G8CkzqkOSSRICgdSveBWxuq1Ae6PFpsbs'
+                }
+            })
+            if (response.ok) {
+                let data = await response.json()
+                setPictureSrc(data.image)
+                setName({name: data.name, surname: data.surname})
+
+    
+            } else {
+                console.log('error')
+
+            }
+        } catch (error) {
+            console.log(error)
+        
+        }
+    }
   const postPost = async () => {
     try {
       const response = await fetch(
@@ -100,11 +129,11 @@ const NewsFeedModal = ({ modal, setModal, setReload }) => {
             style={{ borderRadius: "50%", objectFit: "cover" }}
             height="48px"
             width="48px"
-            src="https://media-exp1.licdn.com/dms/image/C5603AQEN7LDogUjyfw/profile-displayphoto-shrink_100_100/0/1576483727686?e=1651104000&v=beta&t=nmywlNegu0DsNyviFr2tl9jbFVoflqPT1IQd-u89ZXA"
+            src={pictureSrc}
           ></Image>
           <div className="ml-2 mt-n1">
             <div style={{ fontSize: "16px", fontWeight: "600" }}>
-              Julita Wilczek
+              {name.name} {name.surname}
             </div>
             <Button id="sharingSettings">
               <i className="bi bi-globe" style={{ fontSize: "14px" }}></i>{" "}

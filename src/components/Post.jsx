@@ -3,16 +3,17 @@
 import { formatDistanceToNowStrict } from "date-fns"
 import {Image, Button} from "react-bootstrap"
 import { parseISO} from "date-fns";
+import { Link } from "react-router-dom";
 
-const Post = ({text, name, surname, title, image, date, key, imageUploaded}) => {
+const Post = ({text, name, surname, title, image, date, key, imageUploaded, userId}) => {
 
 
     const posted = formatDistanceToNowStrict(parseISO(date))
-    
+const linkTo = userId === "6214aa4e0448b40015116892" ? "/in/me" : "/in/" + userId
  return(<div className="singlePost mb-n2" key={key}>
 <div className="d-flex justify-content-between">
 <div className="d-flex">
-    <Image alt="profile-Image" style={{borderRadius: "50%", objectFit:"cover"}} height="48px" width="48px" src={image}></Image>
+    <Link to={linkTo}> <Image alt="profile-Image" style={{borderRadius: "50%", objectFit:"cover"}} height="48px" width="48px" src={image}></Image></Link>
     <div className="ml-2 d-flex flex-column"><div style={{fontSize:"14px", fontWeight:"600"}}>{name} {surname}</div>
     <div style={{fontSize:"12px"}} className="text-muted postTitle"> {title} </div>
     
