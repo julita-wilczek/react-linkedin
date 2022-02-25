@@ -4,12 +4,14 @@ import {Dropdown, DropdownButton, Modal, Button }from "react-bootstrap"
 const MyNavBarMini = () => {
   return (
     <div className="mainsticky mt-4">
+      
       <div className="compact-links1 d-flex mx-2 justify-content-center">
+        
         <a
           href="https://about.linkedin.com/it-it?lr=1"
           target="_blank"
           rel="noopener noreferrer"
-          className=""
+          className="items"
         >
           about
         </a>
@@ -18,7 +20,7 @@ const MyNavBarMini = () => {
           href="https://www.linkedin.com/accessibility"
           target="_blank"
           rel="noopener noreferrer"
-          className=" mx-3"
+          className=" mx-3 items"
         >
           Accesibility
         </a>
@@ -27,7 +29,7 @@ const MyNavBarMini = () => {
           href="https://www.linkedin.com//help/linkedin?trk=footer_d_flagship3_feed&lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BIvDJ8flGSJG7%2BUFMDZeaBw%3D%3D"
           target="_blank"
           rel="noopener noreferrer"
-          className=""
+          className="items"
         >
           Help Center
         </a>
@@ -74,12 +76,12 @@ const MyNavBarMini = () => {
                 </Dropdown.Item>
               </DropdownButton>
             </div>
-            <a className=" choices"href="https://www.linkedin.com/help/linkedin/answer/62931?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BIvDJ8flGSJG7%2BUFMDZeaBw%3D%3D">Ad Choices</a>
+            <a className="items choices"href="https://www.linkedin.com/help/linkedin/answer/62931?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BIvDJ8flGSJG7%2BUFMDZeaBw%3D%3D">Ad Choices</a>
 
 
       </div>
       <div className="compact-links3 d-flex justify-content-center">
-          <a className=" mx-2 adv" href="https://business.linkedin.com/it-it/marketing-solutions/ads?lr=1">Advertising</a>
+          <a className=" mx-2 items adv" href="https://business.linkedin.com/it-it/marketing-solutions/ads?lr=1">Advertising</a>
           <DropdownButton
                 id="dropdown-basic-button"
                 title="Buisness Services"
