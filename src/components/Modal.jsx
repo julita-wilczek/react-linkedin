@@ -134,7 +134,8 @@ const hideModal = () => {
     return(<>
   <Modal  onHide={hideModal} id="modal" show={modal}>
               <Modal.Header closeButton>
-                <div style={{fontSize: "19px"}}>Edit experience</div>
+              {editMode && (<div style={{fontSize: "19px"}}>Edit experience</div>)}
+                {postMode && (<div style={{fontSize: "19px"}}>Add experience</div>)}
               </Modal.Header>
               <EditForm expId={experienceId} postMode={postMode} setExperience={setExperience} experience={experience} setExpImg={setExpImg}/>
               <Modal.Footer>
