@@ -1,6 +1,10 @@
-import { Button, Row } from 'react-bootstrap'
+import { useEffect, useState } from 'react'
+import { Button} from 'react-bootstrap'
+import { useLocation } from 'react-router-dom'
 
-const ActivityCard = () => {
+const ActivityCard = ({user}) => {
+const location = useLocation()
+
   return (
     <>
       <div className="d-flex align-items-center justify-content-between">
@@ -14,8 +18,10 @@ const ActivityCard = () => {
           <i style={{ fontSize: '16px' }} className="bi bi-plus-lg"></i> Follow
         </Button>
       </div>
-      <div className="font-weight-normal">You haven't posted lately</div>
-      <div className='mb-2'><small>Recent posts you share or comment on will be displayed here</small></div>
+      {location.pathname === "/in/me" && (<div><div className="font-weight-normal"> You haven't posted lately</div>
+      <div className='mb-2'><small>Recent posts you share or comment on will be displayed here</small></div></div>)}
+      {location.pathname !== "/in/me" && (<div><div className="font-weight-normal"> {user} hasn't posted lately</div>
+      <div className='mb-2'><small>Recent posts {user} shares or comments on will be displayed here</small></div></div>)}
       <div className="d-flex flex-row"><div id="activityButton" className="py-2">See all activity</div></div>
     </>
   )

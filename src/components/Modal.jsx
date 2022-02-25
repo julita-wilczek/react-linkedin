@@ -1,12 +1,14 @@
 
 import { useEffect, useState } from "react";
 import { Modal, Button } from "react-bootstrap"
+import { useLocation } from "react-router-dom";
 import EditForm from "./EditForm";
 
 const MyModal = ({setExperience, setmodal, experienceId, experience, modal, setReload}) => {
 const [postMode, setPostMode] = useState(false)
 const [editMode, setEditMode] = useState(false)
 const [expImg, setExpImg] = useState(null)
+const location = useLocation()
 
 const PostModeOn = () => {
   setPostMode(true)
@@ -17,7 +19,8 @@ const EditModeOn = () => {
   setEditMode(true) 
   setPostMode(false)
 }
-useEffect(() => {experienceId === "" ? PostModeOn() : EditModeOn()},[experienceId])
+useEffect(() => {location.pathname === "/in/me" ? PostModeOn() : EditModeOn()},[location])
+
 
  const deleteExperience = async () => {
    try{
@@ -28,7 +31,6 @@ useEffect(() => {experienceId === "" ? PostModeOn() : EditModeOn()},[experienceI
   }}
   );
   if (response.ok) {
-    console.log("success!!")
     setmodal(false)
     setReload(response)
     } 
@@ -74,6 +76,12 @@ try{
  );
  if (response.ok) {
    const data = await response.json()
+  setExperience({role: "",
+      company: "",
+      startDate: "",
+      endDate: "",
+      description: "",
+      area: ""}) 
  if (data) { 
    if (expImg !== null) {
    uploadPicture(data._id)} 
@@ -128,7 +136,7 @@ const hideModal = () => {
               <Modal.Header closeButton>
                 <div style={{fontSize: "19px"}}>Edit experience</div>
               </Modal.Header>
-              <EditForm expId={experienceId} setExperience={setExperience} experience={experience} setExpImg={setExpImg}/>
+              <EditForm expId={experienceId} postMode={postMode} setExperience={setExperience} experience={experience} setExpImg={setExpImg}/>
               <Modal.Footer>
                 {editMode && (<div className="d-flex w-100 justify-content-between"><Button id="deleteButton" onClick={()=>{deleteExperience()}}>
                  Delete experience </Button>

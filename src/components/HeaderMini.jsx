@@ -8,7 +8,7 @@ import { useState, useEffect } from "react";
 const HeaderMini = () => {
   const [name, setName] = useState("");
   const [title, setTitle] = useState("");
-  const [image, setImage] = useState("");
+  const [image, setImage] = useState("https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png");
 
   useEffect(() => {
     fetchData();
@@ -31,12 +31,8 @@ const HeaderMini = () => {
           name: data.name,
           surname: data.surname,
         });
-        setTitle({
-          title: data.title,
-        });
-        setImage({
-          image: data.image,
-        });
+        setTitle(data.title);
+        setImage(data.image);
       }
     } catch (error) {
       console.log(error);
@@ -52,12 +48,12 @@ const HeaderMini = () => {
           />
         </Row>
         <Row className="d-flex flex-column align-items-center borderBottom ">
-          <Image src={image.image} id="userImage" className="mx-auto" />
+          <Image src={image} id="userImage" className="mx-auto" />
           <div className="mb-3 mt-n3 text-center">
             <div className="font-weight-bold " id="userName">
               {name.name} {name.surname}
             </div>
-            <div className="text-muted fontSize">{title.title}</div>
+            <div className="text-muted fontSize">{title}</div>
           </div>
         </Row>
         <Row className="borderBottom fontSize headerMiniTag">

@@ -39,25 +39,21 @@ export default function Header({personalData, setPersonalData}) {
             if (response.ok) {
                 let data = await response.json()
                 setPersonalData(data)
-                //setIsLoading(false)
-                //setIsError(false)
             } else {
                 console.log('error')
-                //setIsError(true)
-                //setIsLoading(false)
+
             }
         } catch (error) {
             console.log(error)
-            //setIsError(true)
-            //setIsLoading(false)
+        
         }
     }
     
     return (
-        <div id="header">
+        <div id="header" style={{marginTop: "0px"}}>
         <div id="top-image"></div>
         <div>
-            <img src={data.image} alt="user profile" className="userImg"></img>
+            <img src={data.image} alt="user profile" className="userImgUpdated"></img>
             <div className='d-flex justify-content-between mt-5'><h3>{data.name} {data.surname}</h3> {myProfile && (<Button className="editButton" onClick={()=>{setModal(true)}}><i className="bi bi-pencil"></i></Button>)}</div>
             
             <div className="mt-n1">{data.title}</div>

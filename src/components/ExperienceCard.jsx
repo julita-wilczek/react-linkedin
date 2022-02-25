@@ -71,7 +71,7 @@ const ExperienceCard = ({ edit, reload, setModal, setExperienceId, setVisibility
             <div style={{ fontSize: "14px" }}>{exp.company}</div>
             <div style={{ fontSize: "14px" }} className="text-muted">
               {format(parseISO(exp.startDate), "MMM yyyy")} -
-              {typeof exp.endDate === "undefined"
+              {typeof exp.endDate === "undefined" || exp.endDate === null
                 ? "still"
                 : format(parseISO(exp.endDate), "MMM yyyy")}
             </div>
