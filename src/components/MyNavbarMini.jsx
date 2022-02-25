@@ -9,7 +9,7 @@ const MyNavBarMini = () => {
           href="https://about.linkedin.com/it-it?lr=1"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-secondary"
+          className=""
         >
           about
         </a>
@@ -18,7 +18,7 @@ const MyNavBarMini = () => {
           href="https://www.linkedin.com/accessibility"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-secondary mx-3"
+          className=" mx-3"
         >
           Accesibility
         </a>
@@ -27,7 +27,7 @@ const MyNavBarMini = () => {
           href="https://www.linkedin.com//help/linkedin?trk=footer_d_flagship3_feed&lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BIvDJ8flGSJG7%2BUFMDZeaBw%3D%3D"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-secondary"
+          className=""
         >
           Help Center
         </a>
@@ -74,12 +74,12 @@ const MyNavBarMini = () => {
                 </Dropdown.Item>
               </DropdownButton>
             </div>
-            <a className="text-secondary choices"href="https://www.linkedin.com/help/linkedin/answer/62931?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BIvDJ8flGSJG7%2BUFMDZeaBw%3D%3D">Ad Choices</a>
+            <a className=" choices"href="https://www.linkedin.com/help/linkedin/answer/62931?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BIvDJ8flGSJG7%2BUFMDZeaBw%3D%3D">Ad Choices</a>
 
 
       </div>
       <div className="compact-links3 d-flex justify-content-center">
-          <a className="text-secondary mx-2 adv" href="https://business.linkedin.com/it-it/marketing-solutions/ads?lr=1">Advertising</a>
+          <a className=" mx-2 adv" href="https://business.linkedin.com/it-it/marketing-solutions/ads?lr=1">Advertising</a>
           <DropdownButton
                 id="dropdown-basic-button"
                 title="Buisness Services"
@@ -90,47 +90,47 @@ const MyNavBarMini = () => {
                   href="https://business.linkedin.com/talent-solutions?trk=flagship_nav&veh=li-header-dropdown-lts-control&src=li-nav"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="optionDrop"
+                  className="optionDrop2"
                 >
-                  Talent Solutions
+                  Talent Solutions <div className="text-muted drop2sub "><br /> Find attract and recruit talent </div>
                 </Dropdown.Item>
                 <Dropdown.Item
                   href="https://www.linkedin.com/legal/user-agreement"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="optionDrop"
+                  className="optionDrop2"
                 >
-                  Sales solution
+                  Sales solution <div className="text-muted drop2sub "><br /> unlock sales opportunities </div>
                 </Dropdown.Item>
                 <Dropdown.Item
                   href="https://business.linkedin.com/sales-solutions?trk=flagship_nav&veh=li-header-dropdown-lss-control&src=li-nav"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="optionDrop"
+                  className="optionDrop2"
                 >
-                  Post a job for free
+                  Post a job for free <div className="text-muted drop2sub "><br /> Get your job in front of quality <br /> Candidates</div>
                 </Dropdown.Item>
                 <Dropdown.Item
                   href="https://business.linkedin.com/it-it/marketing-solutions/ads?lr=1"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="optionDrop"
+                  className="optionDrop2"
                 >
-                  Marketing Solutions
+                  Marketing Solutions <div className="text-muted drop2sub "><br /> develop talent across your <br /> organization</div>
                 </Dropdown.Item>
                 <Dropdown.Item
                   href="https://learning.linkedin.com/?trk=d_flagship3_nav&veh=learning_solutions&src=li-nav"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="optionDrop"
+                  className="optionDrop2"
                 >
-                  Learning Solutions
+                  Learning Solutions <div className="text-muted drop2sub "><br /> develop talent across your <br /> organization</div>
                 </Dropdown.Item>
                 <Dropdown.Item
                   href="https://www.linkedin.com/company/setup/new/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="optionDrop mt-2"
+                  className="optionDrop2 mt-2"
                 >
                   Create a company Page
                 </Dropdown.Item>
