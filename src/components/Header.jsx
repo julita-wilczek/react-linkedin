@@ -39,22 +39,19 @@ export default function Header({personalData, setPersonalData}) {
             if (response.ok) {
                 let data = await response.json()
                 setPersonalData(data)
-                //setIsLoading(false)
-                //setIsError(false)
+    
             } else {
                 console.log('error')
-                //setIsError(true)
-                //setIsLoading(false)
+
             }
         } catch (error) {
             console.log(error)
-            //setIsError(true)
-            //setIsLoading(false)
+        
         }
     }
     
     return (
-        <div id="header">
+        <div id="header" style={{marginTop: "0px"}}>
         <div id="top-image"></div>
         <div>
             <img src={data.image} alt="user profile" className="userImg"></img>

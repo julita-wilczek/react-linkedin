@@ -31,7 +31,7 @@ const ProfilePage = () => {
                     <ProfileSection name="Skills" card={<SkillsCard />} />
                     <ProfileSection name="Language" card={<LanguageCard />} />
                 </Col>
-                <Col className="col-12 col-md-4">
+                <Col className="col-12 col-md-4" style={{marginTop: "-20px"}}>
                     <PeopleSection name="People Also Viewed" card={<PeopleCard />} />
                     <PeopleSection name="People You May Know" card={<PeopleCard />} />
                     <LearningSection />
