@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Modal, Button } from "react-bootstrap"
 import EditForm from "./EditForm";
 
-const MyModal = ({setExperience, setModal, experienceId, experience, modal, setReload}) => {
+const MyModal = ({setExperience, setmodal, experienceId, experience, modal, setReload}) => {
 const [postMode, setPostMode] = useState(false)
 const [editMode, setEditMode] = useState(false)
 const [expImg, setExpImg] = useState(null)
@@ -29,7 +29,7 @@ useEffect(() => {experienceId === "" ? PostModeOn() : EditModeOn()},[experienceI
   );
   if (response.ok) {
     console.log("success!!")
-    setModal(false)
+    setmodal(false)
     setReload(response)
     } 
 } catch (error) {
@@ -49,7 +49,12 @@ useEffect(() => {experienceId === "" ? PostModeOn() : EditModeOn()},[experienceI
  }}
  );
  if (response.ok) {
-  uploadPicture(experienceId)
+  if (expImg !== null) {
+   uploadPicture(experienceId)} 
+   else{
+    setmodal(false)
+    setReload(response)
+   }
    } 
 } catch (error) {
  console.log(error);
@@ -73,7 +78,7 @@ try{
    if (expImg !== null) {
    uploadPicture(data._id)} 
    else{
-    setModal(false)
+    setmodal(false)
     setReload(response)
    }
    } 
@@ -103,7 +108,7 @@ const uploadPicture = async (expId) => {
     })
 
     if (response.ok) {
-      setModal(false)
+      setmodal(false)
       setReload(response)
     } else {
       console.log("sth wrong")
@@ -115,7 +120,7 @@ const uploadPicture = async (expId) => {
 }
 
 const hideModal = () => {
-  setModal(false)
+  setmodal(false)
 }
 
     return(<>

@@ -48,10 +48,13 @@ const createPicture = (e) => {
   };
 
   const handleChange = (property, value) => {
+  
     setExperience({
         ...experience,
         [property]: value,
       })
+      console.log(experience)
+
   }
 
   const toggleCheckbox = () => {
@@ -59,6 +62,8 @@ const createPicture = (e) => {
       SetWorking(false);
     } else {
       SetWorking(true);
+      delete experience.endDate
+      console.log(experience)
     }
   };
   return (
@@ -130,7 +135,7 @@ const createPicture = (e) => {
             rows={3}
             value={experience.description}
             placeholder="insert description"
-            onChange={(e) => {handleChange("description", e.target.value)}}
+            onChange={(e) => {handleChange("description", e.target.value, e)}}
           />
         </Form.Group>
         <Form.Group>

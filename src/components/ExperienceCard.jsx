@@ -1,8 +1,8 @@
-import experience from "../data/experience.json";
 import { Image, Button, Modal, Form } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import { parseISO, format } from "date-fns";
 import { useParams, useLocation } from "react-router-dom";
+import experience from "../data/experience.json";
 
 
 const ExperienceCard = ({ edit, reload, setModal, setExperienceId, setVisibility}) => {
@@ -39,7 +39,8 @@ const ExperienceCard = ({ edit, reload, setModal, setExperienceId, setVisibility
       });
       if (response.ok) {
         let data = await response.json();
-        setExperiences(data);
+        const sorted = data.sort((a, b) => new Date(b.startDate) - new Date(a.startDate))
+        setExperiences(sorted);
       }
     } catch (error) {
       console.log(error);

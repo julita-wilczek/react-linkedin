@@ -20,7 +20,6 @@ const ProfileSection = ({ name, card, bio }) => {
         { role: "",
           company: "",
           startDate: "",
-          endDate: "",
           description: "",
           area: "",})
     const [reload, setReload] = useState(null)
@@ -33,7 +32,7 @@ const ProfileSection = ({ name, card, bio }) => {
                 <h5 className="mb-3 d-inline-block">{name}</h5> {editMode && (<div><Button className="editButton" onClick={()=>{setModal(true)}}><i className="bi bi-plus-lg"></i></Button><Button className="editButton" onClick={() => { navigate('/in/details/6214aa4e0448b40015116892') }}><i className="bi bi-pencil"></i></Button></div>)}</div>
 
             {cloneElement(content,{setModal, setExperienceId, reload})}
-            <MyModal modal={modal} setReload={setReload} setModal={setModal} setExperience={setExperience} experienceId={experienceId} experience={experience}/>
+            <MyModal modal={modal} setReload={setReload} setmodal={setModal} setExperience={setExperience} experienceId={experienceId} experience={experience}/>
         </div>
 
     )
