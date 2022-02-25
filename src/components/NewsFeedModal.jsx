@@ -36,8 +36,9 @@ const NewsFeedModal = ({ modal, setModal, setReload }) => {
 
   const [buttonStatus, setButtonStatus] = useState(true);
   const hideModal = () => {
+    setButtonStatus(true)
     setModal(false);
-    buttonStatus(true)
+    
   };
 
   const [post, setPost] = useState({ text: "" });
@@ -118,7 +119,7 @@ const NewsFeedModal = ({ modal, setModal, setReload }) => {
                 style={{ border: "none" }}
                 as="textarea"
                 onChange={(e) => {
-                  enableButton(e);
+                  enableButton(e)
                 }}
                 rows={3}
                 placeholder="What do you want to talk about?"

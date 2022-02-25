@@ -5,10 +5,12 @@
 import { Form, Button } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import { parseISO, format } from "date-fns";
+import { useLocation } from "react-router-dom";
 
 const EditForm = ({expId, setExperience, experience, setExpImg}) => {
   const [working, SetWorking] = useState(false);
-
+  const location = useLocation()
+  
   useEffect(() => {
     fetchData();
   }, []);
