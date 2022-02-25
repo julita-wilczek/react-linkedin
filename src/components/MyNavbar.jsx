@@ -18,68 +18,65 @@ const MyNavbar = () => {
           id="SearchBarNavbar"
         />
       </Form>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className=" ml-5 ">
-          <Nav.Link
-            className=" d-flex flex-column align-items-center justify-content-end"
-            href="/"
-          >
-            <i className="bi bi-house-door-fill "></i>
-            <span className="d-none d-md-inline-block">Home</span>
-          </Nav.Link>
-          <Nav.Link
-            className=" d-flex flex-column align-items-center justify-content-end"
-            href="#home"
-          >
-            <i className="bi bi-people-fill"></i>
-            Network
-          </Nav.Link>
-          <Nav.Link
-            className=" d-flex flex-column align-items-center justify-content-end"
-            href="#home"
-          >
-            <i className="bi bi-briefcase-fill"></i>
-            Job
-          </Nav.Link>
-          <Nav.Link
-            className="  d-flex flex-column align-items-center justify-content-end"
-            href="#home"
-          >
-            <i className="bi bi-chat-dots-fill"></i>
-            Messaging
-          </Nav.Link>
-          <Nav.Link
-            className=" d-flex flex-column align-items-center justify-content-end"
-            href="#home"
-          >
-            <i className="bi bi-bell-fill text-muted"></i>
-            Notifications
-          </Nav.Link>
-          <Nav.Link
-            className=" d-flex flex-column align-items-center justify-content-end"
-            href="/in/me"
-            id="userImg"
-          >
-            <Image
-              id="UserImageNavbar"
-              src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
-              roundedCircle
-            />
-            Me
-          </Nav.Link>
-          <Nav.Link
-            className=" d-flex flex-column align-items-center justify-content-end"
-            href=""
-          >
-            <i className="bi bi-grid-3x3-gap-fill text-muted"></i>
-            Work
-          </Nav.Link>
-          <Nav.Link id="tryPremium" className="d-flex  " href="#home">
-            Try Premium for free
-          </Nav.Link>
-        </Nav>
-      </Navbar.Collapse>
+      <Nav className=" ml-5 ">
+        <Nav.Link
+          className="containerIconAndNameNavBar d-flex flex-column align-items-center justify-content-end"
+          href="/"
+        >
+          <i className="iconNavBar bi bi-house-door-fill "></i>
+          <span className="d-none d-md-inline-block">Home</span>
+        </Nav.Link>
+        <Nav.Link
+          className="containerIconAndNameNavBar d-flex flex-column align-items-center justify-content-end"
+          href="#home"
+        >
+          <i className="iconNavBar bi bi-people-fill"></i>
+          <span className="d-none d-md-inline-block">Network</span>
+        </Nav.Link>
+        <Nav.Link
+          className="containerIconAndNameNavBar d-flex flex-column align-items-center justify-content-end"
+          href="#home"
+        >
+          <i className="iconNavBar bi bi-briefcase-fill"></i>
+          <span className="d-none d-md-inline-block">Job</span>
+        </Nav.Link>
+        <Nav.Link
+          className="containerIconAndNameNavBar d-flex flex-column align-items-center justify-content-end"
+          href="#home"
+        >
+          <i className="iconNavBar bi bi-chat-dots-fill"></i>
+          <span className="d-none d-md-inline-block">Messaging</span>
+        </Nav.Link>
+        <Nav.Link
+          className="containerIconAndNameNavBar d-flex flex-column align-items-center justify-content-end"
+          href="#home"
+        >
+          <i className="iconNavBar bi bi-bell-fill text-muted"></i>
+          <span className="d-none d-md-inline-block">Notification</span>
+        </Nav.Link>
+        <Nav.Link
+          className="containerIconAndNameNavBar d-flex flex-column align-items-center justify-content-end"
+          href="/in/me"
+          id="userImg"
+        >
+          <Image
+            id="UserImageNavbar"
+            src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
+            roundedCircle
+          />
+          <span className="d-none d-md-inline-block">Me</span>
+        </Nav.Link>
+        <Nav.Link
+          className="containerIconAndNameNavBar d-flex flex-column align-items-center justify-content-end"
+          href=""
+        >
+          <i className="iconNavBar bi bi-grid-3x3-gap-fill text-muted"></i>
+          <span className="d-none d-md-inline-block">Work</span>
+        </Nav.Link>
+        <Nav.Link id="tryPremium" className="d-flex  " href="#home">
+          Try Premium for free
+        </Nav.Link>
+      </Nav>
     </Navbar>
   );
 };

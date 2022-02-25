@@ -1,11 +1,12 @@
 #Navbar {
   width: 100%;
-  font-size: 13px;
-  padding-left: 100px;
-  padding-right: 0;
+  font-size: 12px;
+  padding-left: 140px;
+  padding-right: 140px;
   position: fixed;
   z-index: 100;
   background-color: white;
+  height: 67px;
 }
 
 #linkedinIcon {
@@ -19,7 +20,7 @@
   border-right: 1px solid rgb(141, 134, 134);
 }
 #searchBar {
-  margin-right: 240px;
+  margin-right: 100px;
 }
 
 #SearchBarNavbar {
@@ -30,11 +31,16 @@
   width: 30px;
 }
 
-i {
-  font-size: 20px;
+.iconNavBar {
+  font-size: 23px;
 }
 
 #tryPremium {
   width: 150px;
-  color: rgb(255, 174, 0);
+  color: #915907;
+  padding-top: 20px;
+}
+
+.containerIconAndNameNavBar {
+  width: 90px;
 }
