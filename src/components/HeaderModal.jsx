@@ -104,7 +104,12 @@ const fetchData = async () => {
        }}
        );
        if (response.ok) {
-        uploadPicture()
+        if (profilePicture.has("profile")) {
+          uploadPicture()} 
+          else{
+           setModal(false)
+           setReload(response)
+          }
 
          } 
       } catch (error) {

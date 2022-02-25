@@ -70,7 +70,7 @@ const NewsFeedModal = ({ modal, setModal, setReload }) => {
       if (response.ok) {
         let data = await response.json();
         if (data) {
-          if (postPicture !== null) {
+          if (postPicture.has("post")) {
             uploadPicture(data._id)} 
             else{
              setModal(false)

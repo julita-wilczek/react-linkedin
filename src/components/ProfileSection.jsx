@@ -20,6 +20,7 @@ const ProfileSection = ({ name, card, bio }) => {
         { role: "",
           company: "",
           startDate: "",
+          endDaye: "",
           description: "",
           area: "",})
     const [reload, setReload] = useState(null)
