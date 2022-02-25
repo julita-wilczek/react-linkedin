@@ -1,34 +1,82 @@
-#img1{
-    position: relative;
-}
-.play:hover .sfondo{
-    border: 2px solid ;
-    border-color: white;
+.subtitle{
+    font-size: 16px;
+    font-weight: 400;
 }
 
-.play1{
-    
-    z-index:10;
-    color: white;
-    position: absolute;
-    left: 2.65rem;
-    bottom: 1.3rem
+#img1 {
+  position: relative;
+  width: 120px;
+  height: 70px;
+}
+#img2 {
+  position: relative;
+  width: 120px;
+  height: 70px;
+  object-fit: cover;
+}
+.play:hover .sfondo {
+  border: 2px solid;
+  border-color: white;
 }
 
-.sfondo{
-    position: absolute;
-    left: -8px;
-    bottom: -1px;
-    background-color: black;
-    opacity: 0.6;
-   width: 35px;
+.play1 {
+  z-index: 10;
+  color: white;
+  position: absolute;
+  left: 3.2rem;
+  bottom: 1.3rem;
+}
+
+.sfondo {
+  position: absolute;
+  left: -8px;
+  bottom: -2px;
+  background-color: black;
+  opacity: 0.6;
+  width: 35px;
   height: 35px;
-    border-radius: 50%;
-    z-index: -1;
-    
+  border-radius: 50%;
+  z-index: -1;
 }
 .sfondo:hover {
-    border: 2px solid ;
-    border-color: white;
-    
+  border: 2px solid;
+  border-color: white;
+}
+
+.play2:hover .sfondo {
+  border: 2px solid;
+  border-color: white;
+}
+
+.play2 {
+  z-index: 10;
+  color: white;
+  position: absolute;
+  left: 3.2rem;
+  bottom: 1.3rem;
+}
+
+.sfondo2 {
+  position: absolute;
+  left: -8px;
+  bottom: -2px;
+  background-color: black;
+  opacity: 0.6;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  z-index: -1;
+}
+.sfondo2:hover {
+  border: 2px solid;
+  border-color: white;
+}
+.learnBtn{
+    font-size: 16px!important;
+    background-color: #f3f2ef;
+    color: #666666;
+    font-family: inherit;
+    font-weight: 600;
+    border: 0px;
+    line-height: 20px;
 }
