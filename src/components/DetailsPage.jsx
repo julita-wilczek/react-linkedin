@@ -12,11 +12,11 @@ const DetailsPage = () => {
      <>
     <Container id="page">
         <Row>
-            <Col className="col-8">
-            <ProfileSection name="Experience" card={<ExperienceCard edit="true"/>} />
+            <Col className="col-12 col-md-8" style={{marginTop:"-20px"}}>
+            <ProfileSection name="Experience" card={<ExperienceCard edit="true"/>}/>
             </Col>
-            <Col className="col-4">
-                <div className="editsection">
+            <Col className="col-12 col-md-4">
+                <div className="editsection" style={{marginTop:"0px"}}>
                     <div className="d-flex justify-content-between">
                        <a href="/"> <div className="text-secondary">Edit public profile & URL</div> </a>
                        <i class="bi questionIcon bi-question-circle-fill" title="Test"></i>

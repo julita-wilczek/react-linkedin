@@ -48,8 +48,8 @@ const AddToFeed = () => {
             <div className="feedJobType">Manager-HR</div>
             <div className="d-flex flex-row">
               <div
-                className="rounded-pill ButtonFollow"
-                variant="outline-secondary"
+                className="ButtonFollow"
+               
               >
                 <i class="bi bi-plus"></i>
                 Follow

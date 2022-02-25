@@ -26,7 +26,7 @@ const MyNavbar = () => {
             href="/"
           >
             <i className="bi bi-house-door-fill "></i>
-            Home
+            <span className="d-none d-md-inline-block">Home</span>
           </Nav.Link>
           <Nav.Link
             className=" d-flex flex-column align-items-center justify-content-end"

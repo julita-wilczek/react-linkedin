@@ -53,7 +53,7 @@ const HeaderMini = () => {
         </Row>
         <Row className="d-flex flex-column align-items-center borderBottom ">
           <Image src={image.image} id="userImage" className="mx-auto" />
-          <div className="mb-3">
+          <div className="mb-3 mt-n3 text-center">
             <div className="font-weight-bold " id="userName">
               {name.name} {name.surname}
             </div>
