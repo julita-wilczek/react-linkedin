@@ -1,16 +1,15 @@
-import { Navbar, Nav, Form, FormControl, Image } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
+import { Navbar, Nav, Form, FormControl, Image, Container} from "react-bootstrap";
 import "./MyNavbar.css";
 
 const MyNavbar = () => {
   return (
+    
     <Navbar
       id="Navbar"
-      className="d-flex justify-content-center py-0 "
-      expand="lg"
-    >
+      className="d-flex justify-content-center py-0 flex-nowrap" 
+    ><Container fluid style={{width: "100vw"}}>
       <i id="linkedinIcon" className="bi bi-linkedin"></i>
-      <Form inline id="searchBar">
+      <Form inline id="searchBar" className="d-none d-md-inline-block">
         <FormControl
           type="text"
           placeholder="Search"
@@ -18,7 +17,7 @@ const MyNavbar = () => {
           id="SearchBarNavbar"
         />
       </Form>
-      <Nav className=" ml-5 ">
+   
         <Nav.Link
           className="containerIconAndNameNavBar d-flex flex-column align-items-center justify-content-end"
           href="/"
@@ -73,11 +72,12 @@ const MyNavbar = () => {
           <i className="iconNavBar bi bi-grid-3x3-gap-fill text-muted"></i>
           <span className="d-none d-md-inline-block">Work</span>
         </Nav.Link>
-        <Nav.Link id="tryPremium" className="d-flex  " href="#home">
+        <Nav.Link id="tryPremium" style={{color: "#915907"}} className="d-flex " href="#home">
           Try Premium for free
         </Nav.Link>
-      </Nav>
+        </Container>
     </Navbar>
+  
   );
 };
 
