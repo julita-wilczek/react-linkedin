@@ -1,0 +1,51 @@
+#Navbar {
+  width: 100%;
+  font-size: 12px;
+  padding-left: 140px;
+  padding-right: 140px;
+  position: fixed;
+  z-index: 100;
+  background-color: white;
+  height: 67px;
+}
+
+#linkedinIcon {
+  font-size: 35px;
+  color: rgb(44, 134, 236);
+  margin-right: 10px;
+  margin-left: 30px;
+}
+
+#userImg {
+  border-right: 1px solid rgb(141, 134, 134);
+}
+#searchBar {
+  margin-right: 100px;
+}
+
+#SearchBarNavbar {
+  height: 38px;
+}
+
+#UserImageNavbar {
+  width: 30px;
+}
+
+.iconNavBar {
+  font-size: 23px;
+}
+
+.containerIconAndNameNavBar {
+  width: 90px;
+}
+
+
+#Navbar a:not(#tryPremium){
+  color: rgba(0, 0, 0, 0.6)!important;
+}
+
+#tryPremium {
+  width: 150px;
+  color: #915907!important;
+  
+}

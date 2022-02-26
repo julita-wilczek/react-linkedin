@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Antonio",
+        "description": " 🕺🏽Dancer 💻 Frontend Engineer 🥰 Angular, React and RxJS Lover",
+        "img": "https://picsum.photos/200/200"
+    },
+    {
+        "name": "Francesco",
+        "description": " Strive student",
+        "img": "https://picsum.photos/100/300"
+        
+    },
+    {
+        "name": "Bob Builder",
+        "description": " senior FS",
+        "img": "https://picsum.photos/420/300"
+
+    },
+    {
+        "name": "Luigi Cigi",
+        "description": "neomelodic fan",
+        "img": "https://picsum.photos/430/300"
+
+    },
+    {
+        "name": "Bruno Liegi",
+        "description": " yoga teacher",
+        "img": "https://picsum.photos/440/300"
+
+    }
+    
+]

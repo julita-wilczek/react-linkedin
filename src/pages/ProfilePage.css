@@ -1,0 +1,241 @@
+#page {
+  padding-top: 100px;
+}
+
+.profileSection button:not(#activityButton, .editButton) {
+  border-radius: 1rem;
+  background-color: white;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 600;
+  border-color: rgba(0, 0, 0, 0.6);
+  border-width: 1.5px;
+  font-size: 16px;
+  padding: 3px 16px !important;
+}
+
+hr:last-child {
+  display: none;
+}
+
+.singlePost .post-buttons:hover, .singlePost .moreButton:hover,
+#postModal .postFooterbuttons:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.6);
+} 
+
+.singlePost .post-buttons i {
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.singlePost .post-buttons {
+  background: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.6);
+  border: none;
+}
+#activityButton {
+  background-color: white;
+  display: inline-block;
+  width: 120%;
+  height:120%;
+  border-bottom-left-radius: 0.8rem;
+  border-bottom-right-radius: 0.8rem;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 600;
+  margin-left: -21px;
+  margin-right: -21px;
+  margin-bottom: -21px;
+  border-color: #e9e5df;
+  border-style: solid;
+  border-width: 1px;
+  text-align: center;
+}
+
+.editButton {
+  border: none !important;
+  display: inline-block;
+  background-color: white !important;
+  border: none;
+  border-radius: 50% !important;
+  color: rgba(0, 0, 0, 0.6) !important;
+  font-weight: 900;
+  padding: 0px;
+  margin: 0px;
+}
+
+
+
+.editButton:hover, #activityButton:hover {
+  background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+#activity button:not(#activityButton):hover {
+  background-color: rgb(231, 228, 228);
+}
+
+
+#postModal .postFooterbuttons {
+  background: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.6);
+  border: none;
+  margin: none;
+  padding-right: 12px;
+  padding-left: 12px;
+  border-radius: 50px;
+}
+
+
+
+
+.profileSection,
+.peopleSection,
+#learningSection, #header, .singlePost {
+
+  background-color: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 0.8rem;
+  border-width: 1px;
+  border-color: #e9e5df;
+  border-style: solid;
+}
+
+.peopleSection button,
+#header button:nth-of-type(3) {
+  border-radius: 1rem;
+  background-color: white;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 600;
+  border-color: rgba(0, 0, 0, 0.6);
+  font-size: 16px;
+  padding: 3px 16px !important;
+  box-sizing: border-box;
+}
+
+#sharingSettings {
+  background: none; 
+  border-radius: 1.5rem;
+  color: rgba(0, 0, 0, 0.6);
+  border-color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  font-weight: 600;
+  border-width: 1.5px;
+  padding: 2px 12px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.singlePost .moreButton{
+  width: 24px;
+  height: 24px;
+  background: none;
+  color: rgba(0, 0, 0, 0.6);
+  border: none;
+  border-radius: 50%;
+}
+
+#deleteButton 
+{ border: none!important;
+
+  background-color: white;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 600;
+  border-width: 1.5px;
+  font-size: 16px;
+  padding: 3px 16px !important;
+}
+
+.peopleSection button:hover,
+#header button:nth-of-type(3):hover,
+#deleteButton:hover, .profileSection button:not(#activityButton, .editButton):hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-color:rgba(0, 0, 0, 0.6);;
+  color: rgba(0, 0, 0, 0.6);
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  outline: 1px solid rgba(0, 0, 0, 0.6)!important;
+}
+
+.peopleSection .card {
+  border: none;
+}
+
+#header button:first-of-type:not(.editButton),
+#saveButton, #postButton {
+  border-radius: 1rem;
+  font-weight: 600;
+  border-width: 1.5px;
+  border-color: #0a66c2 !important;
+  font-size: 16px;
+  padding: 3px 16px !important;
+  background-color: #0a66c2 !important;
+}
+
+#postButton:disabled {
+  background-color: rgba(0, 0, 0, 0.08)!important;
+  border-color: rgba(0, 0, 0, 0.0)!important;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  border-radius: 0.5rem!important;
+  width: 552px!important;
+}
+.postTitle {
+  width: 400px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#header button:nth-of-type(2) {
+  border-radius: 1rem;
+  font-weight: 600;
+  border-width: 1.5px;
+  border-color: #0a66c2 !important;
+  font-size: 16px;
+  padding: 3px 16px !important;
+  background-color: white !important;
+  color: #0a66c2 !important;
+}
+
+#header button:nth-of-type(2):hover {
+  background-color: rgb(10, 102, 194, 0.1) !important;
+  border-width: 2px;
+}
+
+#header button:first-of-type:hover:not(.editButton),
+#saveButton:hover {
+  background-color: #004182 !important;
+  border-color: #004182 !important;
+}
+
+#form {
+  background-color: white;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 16px;
+  padding: 3px 16px !important;
+}
+
+#form .form-label,
+#form .form-control::placeholder {
+  font-weight: 400 !important;
+  font-size: 14px;
+}
+
+input[type="text"], textarea[class="form-control"] 
+{ font-size:14px; }

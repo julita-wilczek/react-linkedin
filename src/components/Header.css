@@ -1,0 +1,29 @@
+
+#top-image {
+  background-image: url("https://marketplace.canva.com/EAENvp21inc/1/0/1600w/canva-simple-work-linkedin-banner-qt_TMRJF4m0.jpg");
+  height: 144px;
+  margin-top: -21px;
+  margin-left: -21px;
+  margin-right: -21px;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+
+.userImgUpdated {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  position: absolute;
+  top: 60px;
+}
+
+.btns {
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+#header span {
+  color:#0a66c2!important;
+  font-weight: 600;
+}
