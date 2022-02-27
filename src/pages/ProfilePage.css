@@ -17,24 +17,11 @@ hr:last-child {
   display: none;
 }
 
-.singlePost .post-buttons:hover, .singlePost .moreButton:hover,
 #postModal .postFooterbuttons:hover {
   background-color: rgba(0, 0, 0, 0.1);
   color: rgba(0, 0, 0, 0.6);
 } 
 
-.singlePost .post-buttons i {
-  font-size: 20px;
-  font-weight: 900;
-}
-
-.singlePost .post-buttons {
-  background: none;
-  font-size: 14px;
-  font-weight: 600;
-  color: rgba(0, 0, 0, 0.6);
-  border: none;
-}
 #activityButton {
   background-color: white;
   display: inline-block;
@@ -93,7 +80,7 @@ hr:last-child {
 
 .profileSection,
 .peopleSection,
-#learningSection, #header, .singlePost {
+#learningSection, #header{
 
   background-color: white;
   margin-top: 20px;
@@ -129,24 +116,6 @@ hr:last-child {
 
 }
 
-
-
-
-
-
-
-
-
-
-
-.singlePost .moreButton{
-  width: 24px;
-  height: 24px;
-  background: none;
-  color: rgba(0, 0, 0, 0.6);
-  border: none;
-  border-radius: 50%;
-}
 
 #deleteButton 
 { border: none!important;
@@ -196,12 +165,7 @@ hr:last-child {
   border-radius: 0.5rem!important;
   width: 552px!important;
 }
-.postTitle {
-  width: 400px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
+
 #header button:nth-of-type(2) {
   border-radius: 1rem;
   font-weight: 600;
