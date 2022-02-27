@@ -13,17 +13,17 @@ const Post = (props) => {
       ? "/in/me"
       : "/in/" + props.userId;
 
+  /* This function changes like icon color when clicked on */
   const likePost = (e) => {
-  
-    if (e.target.classList.value === "bi bi-hand-thumbs-up"){
-    e.target.style.color = "#0a66c2"
-    e.target.classList ="bi bi-hand-thumbs-up-fill"
-   
-  } else if (e.target.classList.value === "bi bi-hand-thumbs-up-fill") {
-    e.target.style.color = "rgba(0, 0, 0, 0.6)"
-    e.target.classList ="bi bi-hand-thumbs-up"
-  }
-  }
+    if (e.target.classList.value === "bi bi-hand-thumbs-up") {
+      e.target.style.color = "#0a66c2";
+      e.target.classList = "bi bi-hand-thumbs-up-fill";
+    } else if (e.target.classList.value === "bi bi-hand-thumbs-up-fill") {
+      e.target.style.color = "rgba(0, 0, 0, 0.6)";
+      e.target.classList = "bi bi-hand-thumbs-up";
+    }
+  };
+
   return (
     <div className="single-post" key={props.key}>
       {/*This is the main container*/}
@@ -61,7 +61,14 @@ const Post = (props) => {
       <div className="d-flex justify-content-around mt-n2 mb-n3">
         {/* This is post footer */}
         <Button className="post-buttons d-flex justify-content-center align-items-center">
-          <i className="bi bi-hand-thumbs-up" onClick={(e)=>{likePost(e)}}><span>Like</span></i> 
+          <i
+            className="bi bi-hand-thumbs-up"
+            onClick={(e) => {
+              likePost(e);
+            }}
+          >
+            <span>Like</span>
+          </i>
         </Button>
         <Button className="post-buttons d-flex justify-content-center align-items-center">
           <i class="bi bi-chat-text"></i>Comment
