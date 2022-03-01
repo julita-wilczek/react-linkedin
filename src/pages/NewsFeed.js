@@ -17,19 +17,19 @@ const NewsFeed = () => {
 
   const [modal, setModal] = useState(false)
   const [reload, setReload] = useState(null)
-
+  const [myProfile, setMyProfile] = useState({})
 
     return (
 
       <Container id="page">
         <Row>
             <Col className="col-12 col-md-3">
-              <HeaderMini />
+              <HeaderMini setMyProfile={setMyProfile} myProfile={myProfile}/>
               <TagSection />
             </Col>
 
             <Col className="col-12 col-md-6">
-              <PostAddSection setModal={setModal}/>
+              <PostAddSection myProfile={myProfile} setModal={setModal}/>
               <PostAreaSection reload={reload} />
               <NewsFeedModal setReload={setReload} modal={modal} setModal={setModal}/>
             </Col>

@@ -1,19 +1,17 @@
 //This is the Header that appears on the News Feed Page (Left hand side)
-//It containes our data so use CRUD for "me" profile
+//It containes our profile data so use CRUD for "me" profile
 //GET https://striveschool-api.herokuapp.com/api/profile/me
 import { Container, Row, Col, Image } from "react-bootstrap";
 import "./HeaderMini.css";
-import { useState, useEffect } from "react";
+import {useEffect } from "react";
 
-const HeaderMini = () => {
-  const [name, setName] = useState("");
-  const [title, setTitle] = useState("");
-  const [image, setImage] = useState("https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png");
-
+const HeaderMini = (props) => {
   useEffect(() => {
     fetchData();
   }, []);
 
+  /*This fetched my profile and this data can then be used in other parts of the NewsFeed page */
+  
   const fetchData = async () => {
     try {
       let response = await fetch(
@@ -27,12 +25,12 @@ const HeaderMini = () => {
       );
       if (response.ok) {
         let data = await response.json();
-        setName({
+        props.setMyProfile({
           name: data.name,
           surname: data.surname,
+          title: data.title,
+          image: data.image,
         });
-        setTitle(data.title);
-        setImage(data.image);
       }
     } catch (error) {
       console.log(error);
@@ -48,12 +46,12 @@ const HeaderMini = () => {
           />
         </Row>
         <Row className="d-flex flex-column align-items-center borderBottom ">
-          <Image src={image} id="userImage" className="mx-auto" />
+          <Image src={props.myProfile.image} id="userImage" className="mx-auto" />
           <div className="mb-3 mt-n3 text-center">
             <div className="font-weight-bold " id="userName">
-              {name.name} {name.surname}
+            {props.myProfile.name} {props.myProfile.surname}
             </div>
-            <div className="text-muted fontSize">{title}</div>
+            <div className="text-muted fontSize">{props.myProfile.title}</div>
           </div>
         </Row>
         <Row className="borderBottom fontSize headerMiniTag">

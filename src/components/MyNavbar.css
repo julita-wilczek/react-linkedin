@@ -6,12 +6,12 @@
   position: fixed;
   z-index: 100;
   background-color: white;
-  height: 67px;
+  height: 55px;
 }
 
 #linkedinIcon {
   font-size: 35px;
-  color: rgb(44, 134, 236);
+  color: #0a66c2;
   margin-right: 10px;
   margin-left: 30px;
 }
@@ -19,16 +19,9 @@
 #userImg {
   border-right: 1px solid rgb(141, 134, 134);
 }
-#searchBar {
-  margin-right: 100px;
-}
-
-#SearchBarNavbar {
-  height: 38px;
-}
 
 #UserImageNavbar {
-  width: 30px;
+  width: 28px;
 }
 
 .iconNavBar {
