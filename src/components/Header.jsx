@@ -10,7 +10,7 @@ export default function Header({personalData, setPersonalData}) {
     //const [isLoading, setIsLoading] = useState(false)
     //const [isError, setIsError] = useState(false)
     const params = useParams()
-    const url = location.pathname === "/in/me" ? 'https://striveschool-api.herokuapp.com/api/profile/me' : 'https://striveschool-api.herokuapp.com/api/profile/' + params.profileId
+    const url = location.pathname === "/in/me" ? 'https://striveschool-api.herokuapp.com/api/profile/6214aa4e0448b40015116892' : 'https://striveschool-api.herokuapp.com/api/profile/' + params.profileId
     const data = personalData
     const [modal, setModal] = useState(false)
     const [reload, setReload] = useState(null)

@@ -15,7 +15,7 @@ const HeaderMini = (props) => {
   const fetchData = async () => {
     try {
       let response = await fetch(
-        "https://striveschool-api.herokuapp.com/api/profile/me",
+        "https://striveschool-api.herokuapp.com/api/profile/6214aa4e0448b40015116892",
         {
           headers: {
             Authorization:

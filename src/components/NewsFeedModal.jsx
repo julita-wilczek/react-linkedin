@@ -63,7 +63,7 @@ const NewsFeedModal = ({ modal, setModal, setReload }) => {
     
     const fetchData = async () => {
         try {
-            let response = await fetch("https://striveschool-api.herokuapp.com/api/profile/me", {
+            let response = await fetch("https://striveschool-api.herokuapp.com/api/profile/6214aa4e0448b40015116892", {
                 headers: {
                     Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWZhYTQ4MDgyZWExZDAwMTViYjA1NWQiLCJpYXQiOjE2NTAyNzg2NjYsImV4cCI6MTY1MTQ4ODI2Nn0.6JbnsMx2f_LapEl9vU2JHole-4eJA8ktC8CQSNkfKeY'
                 }
